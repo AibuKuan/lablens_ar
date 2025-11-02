@@ -1,14 +1,19 @@
-import 'package:ar_app/services/model.dart';
+import 'package:ar_flutter_plugin_2/ar_flutter_plugin.dart';
+import 'package:ar_flutter_plugin_2/datatypes/config_planedetection.dart';
+import 'package:ar_flutter_plugin_2/datatypes/hittest_result_types.dart';
 import 'package:ar_flutter_plugin_2/datatypes/node_types.dart';
 import 'package:ar_flutter_plugin_2/managers/ar_anchor_manager.dart';
 import 'package:ar_flutter_plugin_2/managers/ar_location_manager.dart';
 import 'package:ar_flutter_plugin_2/managers/ar_object_manager.dart';
 import 'package:ar_flutter_plugin_2/managers/ar_session_manager.dart';
+import 'package:ar_flutter_plugin_2/models/ar_anchor.dart';
+import 'package:ar_flutter_plugin_2/models/ar_hittest_result.dart'; 
 import 'package:ar_flutter_plugin_2/models/ar_node.dart';
-import 'package:ar_flutter_plugin_2/ar_flutter_plugin.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:vector_math/vector_math_64.dart' as vector;
+
+import '../services/model.dart';
 
 class ARViewScreen extends StatefulWidget {
   final Model model;
@@ -20,54 +25,157 @@ class ARViewScreen extends StatefulWidget {
 }
 
 class _ARViewScreenState extends State<ARViewScreen> {
+  // AR Managers
   late ARSessionManager arSessionManager;
   late ARObjectManager arObjectManager;
   late ARAnchorManager arAnchorManager;
   late ARLocationManager arLocationManager;
 
+  // State for the anchored object
+  ARNode? placedNode;
+  ARPlaneAnchor? currentAnchor;
+
   @override
   void initState() {
     super.initState();
-    // Hide system UI
+    // Hide system UI for immersive experience
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
   }
 
   @override
   void dispose() {
-    // Restore system UI
+    // Clean up managers and restore system UI
+    arSessionManager.dispose();
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    return ARView(
-      onARViewCreated: _onARViewCreated,
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          placedNode == null ? 'Tap a Surface to Place Model' : 'Model Placed - Tap to Move', 
+          style: const TextStyle(fontSize: 16),
+        ),
+        backgroundColor: Colors.black54,
+      ),
+      body: ARView(
+        onARViewCreated: _onARViewCreated,
+        // Enable both horizontal and vertical plane detection
+        planeDetectionConfig: PlaneDetectionConfig.horizontalAndVertical,
+      ),
     );
   }
 
-  _onARViewCreated(ARSessionManager sessionManager, ARObjectManager objectManager, ARAnchorManager anchorManager, ARLocationManager locationManager) {
+  void _onARViewCreated(
+    ARSessionManager sessionManager, 
+    ARObjectManager objectManager, 
+    ARAnchorManager anchorManager, 
+    ARLocationManager locationManager,
+  ) {
     arSessionManager = sessionManager;
     arObjectManager = objectManager;
     arAnchorManager = anchorManager;
     arLocationManager = locationManager;
 
+    // 1. Session Initialization
     arSessionManager.onInitialize(
       showFeaturePoints: false,
-      showPlanes: true,
+      showPlanes: true, // Show planes to guide user taps
       showWorldOrigin: false,
-      handleTaps: false,
+      handleTaps: true, // Enable tap handling for placement
     );
-
+    
+    // 2. Set Callbacks
+    arSessionManager.onPlaneOrPointTap = _onPlaneOrPointTapped;
+    
+    // 3. Object Manager Initialization & Gestures
     arObjectManager.onInitialize();
-    arObjectManager.addNode(
-      ARNode(
+    
+    // Handlers only take the nodeName as argument
+    arObjectManager.onPanChange = _onPanChange;
+    arObjectManager.onRotationChange = _onRotationChange;
+    
+    // Note: The onNodeScale handler is not explicitly available.
+  }
+
+  // --- Gesture Handlers (for fine-tuning movement, rotation) ---
+  // Signature now only accepts String nodeName
+  void _onPanChange(String nodeName) {
+    // This function is triggered when the user drags the model (Pan gesture).
+    debugPrint('Node $nodeName panned.');
+    // The plugin handles the underlying anchor movement automatically.
+  }
+
+  // Signature now only accepts String nodeName
+  void _onRotationChange(String nodeName) {
+    // This function is triggered when the user rotates the model (Rotation gesture).
+    debugPrint('Node $nodeName rotated.');
+  }
+
+  // --- Core Re-Anchoring Logic (for moving the model to a new tap location) ---
+  Future<void> _onPlaneOrPointTapped(List<ARHitTestResult> hitTestResults) async {
+    ARHitTestResult? hit;
+
+    // 1. Find a valid hit result (plane is preferred for stability)
+    for (var r in hitTestResults) {
+      if (r.type == ARHitTestResultType.plane) {
+        hit = r;
+        break;
+      }
+    }
+    // Fallback to point if no plane was hit
+    if (hit == null) {
+        for (var r in hitTestResults) {
+            // ARHitTestResultType is 'point'
+            if (r.type == ARHitTestResultType.point) {
+                hit = r;
+                break;
+            }
+        }
+    }
+
+    if (hit == null) {
+      // No suitable surface was hit
+      return;
+    }
+
+    // 2. Remove the previous anchor and node if they exist (to simulate a move)
+    if (currentAnchor != null) {
+      await arAnchorManager.removeAnchor(currentAnchor!);
+      currentAnchor = null;
+    }
+    if (placedNode != null) {
+        await arObjectManager.removeNode(placedNode!);
+        placedNode = null;
+    }
+    
+    // 3. Create and add a new anchor at the hit location
+    // The constructor requires 'type' and 'transformation'.
+    final newAnchor = ARPlaneAnchor(
+      transformation: hit.worldTransform
+    );
+    final didAddAnchor = await arAnchorManager.addAnchor(newAnchor);
+
+    if (didAddAnchor == true) {
+      currentAnchor = newAnchor;
+
+      // 4. Create the node and attach it to the new anchor
+      placedNode = ARNode(
         type: NodeType.localGLTF2,
         uri: widget.model.path,
-        scale: vector.Vector3(0.2, 0.2, 0.2),
-        position: vector.Vector3(0.0, 0.0, -1.0),
-        
-      )
-    );
+        // Set an appropriate default scale
+        scale: vector.Vector3(0.2, 0.2, 0.2), 
+        // transformation: hit.worldTransform,
+      );
+
+      await arObjectManager.addNode(placedNode!, planeAnchor: currentAnchor);
+      
+      // Update UI state to show the model is placed
+      setState(() {
+        // Triggers a rebuild to update the AppBar text
+      });
+    }
   }
 }
