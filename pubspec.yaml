@@ -69,6 +69,7 @@ flutter:
   # https://flutter.dev/to/resolution-aware-images
 
   assets:
+    - assets/
     - assets/model_viewer.html
     - assets/models/
 

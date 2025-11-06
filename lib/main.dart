@@ -1,3 +1,4 @@
+import 'package:ar_app/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'screens/scanner_screen.dart';
@@ -25,7 +26,7 @@ class _NavigatorScreenState extends State<NavigatorScreen> {
   int _selectedIndex = 0;
 
   final List<Widget> _pages = [
-    Center(child: Text('Home Screen')),
+    HomeScreen(),
     // ARViewScreen(),
     ScannerScreen(),
     Center(child: Text('Library Screen')),
@@ -43,19 +44,19 @@ class _NavigatorScreenState extends State<NavigatorScreen> {
       appBar: AppBar(title: const Text('AR Capstone')),
       body: _pages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
-        currentIndex: 0,
+        currentIndex: _selectedIndex,
         onTap: _onItemTapped,
         items: const [
           BottomNavigationBarItem(
-            icon: Icon(Icons.view_headline),
+            icon: Icon(Icons.home),
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.view_headline),
+            icon: Icon(Icons.qr_code),
             label: 'Scanner',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.view_headline),
+            icon: Icon(Icons.folder),
             label: 'Library',
           ),
         ],

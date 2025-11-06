@@ -1,3 +1,4 @@
+import 'package:ar_app/widgets/equipment_detail.dart';
 import 'package:ar_flutter_plugin_2/ar_flutter_plugin.dart';
 import 'package:ar_flutter_plugin_2/datatypes/config_planedetection.dart';
 import 'package:ar_flutter_plugin_2/datatypes/hittest_result_types.dart';
@@ -60,11 +61,99 @@ class _ARViewScreenState extends State<ARViewScreen> {
         ),
         backgroundColor: Colors.black54,
       ),
-      body: ARView(
-        onARViewCreated: _onARViewCreated,
-        // Enable both horizontal and vertical plane detection
-        planeDetectionConfig: PlaneDetectionConfig.horizontalAndVertical,
-      ),
+      body: GestureDetector(
+        onVerticalDragEnd: (details) {
+          if (details.primaryVelocity! < -500) {
+            showModalBottomSheet(
+              context: context,
+              isScrollControlled: true,
+              builder: (context) {
+                return DraggableScrollableSheet(
+                  initialChildSize: 0.5,
+                  minChildSize: 0.5,
+                  maxChildSize: 0.9,
+                  expand: false,
+                  builder: (context, controller) {
+                    return Container(
+                      decoration: const BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(16.0),
+                          topRight: Radius.circular(16.0),
+                        )
+                      ),
+
+                      child: Column(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Container(
+                              width: 40,
+                              height: 5,
+                              decoration: BoxDecoration(
+                                color: Colors.grey,
+                                borderRadius: BorderRadius.circular(10),
+                              )
+                            )
+                          ),
+
+                          Expanded(
+                            child: ListView(
+                              controller: controller,
+                              children: [
+                                EquipmentDetail(),
+                              ]
+                            )
+                          )
+                        ]
+                      )
+                    );
+                  },
+                );
+              },
+            );
+          }
+        },
+      child: ARView(
+          onARViewCreated: _onARViewCreated,
+          // Enable both horizontal and vertical plane detection
+          planeDetectionConfig: PlaneDetectionConfig.horizontalAndVertical,
+        ),
+      )
+    //   body: Stack(
+    //     children: [
+    //       ARView(
+    //         onARViewCreated: _onARViewCreated,
+    //         // Enable both horizontal and vertical plane detection
+    //         planeDetectionConfig: PlaneDetectionConfig.horizontalAndVertical,
+    //       ),
+
+    //       Positioned(
+    //         bottom: 20,
+    //         right: 20,
+    //         child: ElevatedButton(
+    //           onPressed: () {
+    //             showModalBottomSheet(
+    //               context: context,
+    //               isScrollControlled: true,
+    //               builder: (context) {
+    //                 return DraggableScrollableSheet(
+    //                   initialChildSize: 0.5,
+    //                   minChildSize: 0.5,
+    //                   maxChildSize: 0.9,
+    //                   expand: false,
+    //                   builder: (context, controller) {
+    //                     return EquipmentDetail();
+    //                   },
+    //                 );
+    //               },
+    //             );
+    //           },
+    //           child: const Text('View Detail'),
+    //         ),
+    //       )
+    //     ]
+    //   ),
     );
   }
 
