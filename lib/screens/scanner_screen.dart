@@ -31,9 +31,20 @@ class _ScannerScreenState extends State<ScannerScreen> {
         if (code != null) {
           _controller.stop();
           final model = Model(code);
-          Navigator.of(context).push(
-            MaterialPageRoute(builder: (context) => ARViewScreen(model: model)),
-          ).then((_) => _controller.start());
+          model.exists().then((value) {
+            if (!value) {
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  content: Text('Model not found'),
+                  backgroundColor: Colors.red,
+                ),
+              );
+            } else {
+              Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => ARViewScreen(model: model)),
+              ).then((_) => _controller.start());
+            }
+          });
         }
       }
     );   
