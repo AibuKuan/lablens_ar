@@ -71,6 +71,7 @@ flutter:
   assets:
     - assets/
     - assets/model_viewer.html
+    - assets/descriptions/
     - assets/models/
 
   # For details regarding adding assets from package dependencies, see

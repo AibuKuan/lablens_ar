@@ -101,7 +101,7 @@ class _ARViewScreenState extends State<ARViewScreen> {
                             child: ListView(
                               controller: controller,
                               children: [
-                                EquipmentDetail(),
+                                EquipmentDetail(model: widget.model),
                               ]
                             )
                           )
@@ -253,7 +253,7 @@ class _ARViewScreenState extends State<ARViewScreen> {
       // 4. Create the node and attach it to the new anchor
       placedNode = ARNode(
         type: NodeType.localGLTF2,
-        uri: widget.model.path,
+        uri: widget.model.modelPath,
         // Set an appropriate default scale
         scale: vector.Vector3(0.2, 0.2, 0.2), 
         // transformation: hit.worldTransform,

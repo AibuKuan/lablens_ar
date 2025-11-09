@@ -25,12 +25,12 @@ class _ScannerScreenState extends State<ScannerScreen> {
   Widget build(BuildContext context) {
     return MobileScanner(
       controller: _controller,
-      onDetect: (capture) {
+      onDetect: (capture) async {
         final barcode = capture.barcodes.first;
         final String? code = barcode.rawValue;
         if (code != null) {
           _controller.stop();
-          final model = Model(code);
+          final model = await Model.create(code);
           model.exists().then((value) {
             if (!value) {
               ScaffoldMessenger.of(context).showSnackBar(
