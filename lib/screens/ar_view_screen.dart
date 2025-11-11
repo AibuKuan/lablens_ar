@@ -15,6 +15,7 @@ import 'package:flutter/services.dart';
 import 'package:vector_math/vector_math_64.dart' as vector;
 
 import '../services/model.dart';
+import '../widgets/model_scaler.dart';
 
 class ARViewScreen extends StatefulWidget {
   final Model model;
@@ -114,46 +115,26 @@ class _ARViewScreenState extends State<ARViewScreen> {
             );
           }
         },
-      child: ARView(
-          onARViewCreated: _onARViewCreated,
-          // Enable both horizontal and vertical plane detection
-          planeDetectionConfig: PlaneDetectionConfig.horizontalAndVertical,
-        ),
-      )
-    //   body: Stack(
-    //     children: [
-    //       ARView(
-    //         onARViewCreated: _onARViewCreated,
-    //         // Enable both horizontal and vertical plane detection
-    //         planeDetectionConfig: PlaneDetectionConfig.horizontalAndVertical,
-    //       ),
+        child: Stack(
+          children: [
+            ARView(
+              onARViewCreated: _onARViewCreated,
+              planeDetectionConfig: PlaneDetectionConfig.horizontalAndVertical,
+            ),
 
-    //       Positioned(
-    //         bottom: 20,
-    //         right: 20,
-    //         child: ElevatedButton(
-    //           onPressed: () {
-    //             showModalBottomSheet(
-    //               context: context,
-    //               isScrollControlled: true,
-    //               builder: (context) {
-    //                 return DraggableScrollableSheet(
-    //                   initialChildSize: 0.5,
-    //                   minChildSize: 0.5,
-    //                   maxChildSize: 0.9,
-    //                   expand: false,
-    //                   builder: (context, controller) {
-    //                     return EquipmentDetail();
-    //                   },
-    //                 );
-    //               },
-    //             );
-    //           },
-    //           child: const Text('View Detail'),
-    //         ),
-    //       )
-    //     ]
-    //   ),
+            Positioned(
+              bottom: 0, // Align to the very bottom edge of the Stack
+              left: 0,
+              right: 0, // Stretch across the full width
+              child: Container( // Wrap the scaler in a container to give it background/padding
+                padding: const EdgeInsets.symmetric(vertical: 20),
+                color: Colors.black54, // Ensures visibility over the AR background
+                child: ModelScaler(onChanged: widget.model.scale),
+              ),
+            ),
+          ]
+        )
+      )
     );
   }
 
@@ -167,6 +148,8 @@ class _ARViewScreenState extends State<ARViewScreen> {
     arObjectManager = objectManager;
     arAnchorManager = anchorManager;
     arLocationManager = locationManager;
+
+    widget.model.addObjectManager(arObjectManager);
 
     // 1. Session Initialization
     arSessionManager.onInitialize(
@@ -236,8 +219,8 @@ class _ARViewScreenState extends State<ARViewScreen> {
       currentAnchor = null;
     }
     if (placedNode != null) {
-        await arObjectManager.removeNode(placedNode!);
-        placedNode = null;
+      await arObjectManager.removeNode(placedNode!);
+      placedNode = null;
     }
     
     // 3. Create and add a new anchor at the hit location
@@ -249,15 +232,10 @@ class _ARViewScreenState extends State<ARViewScreen> {
 
     if (didAddAnchor == true) {
       currentAnchor = newAnchor;
+      widget.model.currentAnchor = currentAnchor;
 
       // 4. Create the node and attach it to the new anchor
-      placedNode = ARNode(
-        type: NodeType.localGLTF2,
-        uri: widget.model.modelPath,
-        // Set an appropriate default scale
-        scale: vector.Vector3(0.2, 0.2, 0.2), 
-        // transformation: hit.worldTransform,
-      );
+      placedNode = widget.model.arNode;
 
       await arObjectManager.addNode(placedNode!, planeAnchor: currentAnchor);
       

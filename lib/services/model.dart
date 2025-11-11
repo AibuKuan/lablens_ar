@@ -1,11 +1,22 @@
 import 'dart:convert';
 import 'package:ar_app/utils/asset.dart';
+import 'package:ar_flutter_plugin_2/datatypes/node_types.dart';
+import 'package:ar_flutter_plugin_2/managers/ar_object_manager.dart';
+import 'package:ar_flutter_plugin_2/models/ar_anchor.dart';
+import 'package:ar_flutter_plugin_2/models/ar_node.dart';
 import 'package:flutter/services.dart' show rootBundle;
+import 'package:vector_math/vector_math_64.dart' as vector;
 
 
 class Model {
   String modelPath = "assets/models/";
   String descPath = "assets/descriptions/";
+
+  final double initialScale = 0.2;
+
+  ARNode? arNode;
+  ARObjectManager? objectManager;
+  ARPlaneAnchor? currentAnchor;
 
   String? name;
   String? category;
@@ -18,6 +29,7 @@ class Model {
   static Future<Model> create(String name) async {
     final model = Model._internal(name);
     await model._loadDescription();
+    model._createARNode();
     return model;
   }
   
@@ -45,7 +57,27 @@ class Model {
     }
   }
 
+  void _createARNode() {
+    arNode = ARNode(
+      type: NodeType.localGLTF2,
+      uri: modelPath,
+      scale: vector.Vector3(initialScale, initialScale, initialScale),
+    );
+  }
+
   Future<bool> exists() async {
     return await assetExists(modelPath); 
+  }
+
+  void addObjectManager(ARObjectManager objectManager) {
+    this.objectManager = objectManager;
+  }
+  
+  void scale(scaleFactor) {
+    if (arNode == null) return;
+    // double scale = arNode!.scale.x;
+    arNode!.scale = vector.Vector3(initialScale * scaleFactor, initialScale * scaleFactor, initialScale * scaleFactor);
+    objectManager!.removeNode(arNode!);
+    objectManager!.addNode(arNode!, planeAnchor: currentAnchor);
   }
 }
