@@ -1,0 +1,10 @@
+{
+    "name": "Breast Pump",
+    "modelPath": "",
+    "category": "Assessment and Infant Care Equipment",
+    "specifications": "Manual or electric device; made of medical-grade plastic; includes flange, collection bottle, and suction mechanism.",
+    "function": "Extracts breast milk from lactating mothers for storage or feeding.",
+    "usage": "Wash hands and assemble pump; position flange over nipple, create seal, and follow pump instructions for suction and milk collection.",
+    "maintenance": "Sterilize all parts after each use; do not share between users; check for cracks or wear in parts.",
+    "warning": "Insufficient cleaning, incorrect flange size causing discomfort, or improper assembly."
+}

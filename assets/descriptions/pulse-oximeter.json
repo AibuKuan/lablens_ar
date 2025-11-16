@@ -1,0 +1,10 @@
+{
+    "name": "Pulse Oximeter",
+    "modelPath": "",
+    "category": "Monitoring and Assessment Equipment",
+    "specifications": "Battery-operated device; plastic finger or ear clip sensor; LED digital display; lightweight (50–100 g).",
+    "function": "Measures oxygen saturation (SpO2) and pulse rate non-invasively.",
+    "usage": "Clean sensor; attach to patient’s finger or ear; ensure stable placement; wait for readings and monitor for accuracy.",
+    "maintenance": "Disinfect sensor surface after each use; avoid dropping the device; check battery regularly.",
+    "warning": "Using on cold or wet fingers, which can give inaccurate readings."
+}

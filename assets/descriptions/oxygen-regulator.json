@@ -1,0 +1,10 @@
+{
+    "name": "Oxygen Regulator",
+    "modelPath": "",
+    "category": "Respiratory Care Equipment",
+    "specifications": "Brass and steel construction; includes pressure gauge, flowmeter, and adjusting knob; designed to attach to an oxygen cylinder.",
+    "function": "Controls the flow rate and delivery of oxygen from a cylinder to the patient via tubing or mask.",
+    "usage": "Wear gloves; attach regulator securely to oxygen cylinder; open valve slowly; adjust flow rate as prescribed and confirm pressure on the gauge.",
+    "maintenance": "Check for leaks; clean gauge surfaces; avoid using damaged or corroded regulators.",
+    "warning": "Setting incorrect flow rate or forcing the regulator onto the cylinder, which can cause equipment damage or injury."
+}

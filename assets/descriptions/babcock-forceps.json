@@ -1,0 +1,10 @@
+{
+    "name": "Babcock Forceps",
+    "modelPath": "",
+    "category": "Surgical Instruments",
+    "specifications": "Stainless steel; curved tip without teeth; fenestrated jaws; length 16–20 cm.",
+    "function": "Used for grasping delicate tissue such as intestines, fallopian tubes, or vessels during surgical procedures.",
+    "usage": "Wear sterile gloves; hold by finger rings; gently grasp tissue with minimal pressure to avoid trauma.",
+    "maintenance": "Clean and sterilize after each use; inspect hinges for smooth operation; store in a dry, sterile environment.",
+    "warning": "Excessive force causing tissue injury; improper sterilization leading to infection."
+}

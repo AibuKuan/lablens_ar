@@ -1,0 +1,10 @@
+{
+    "name": "Microscope",
+    "modelPath": "",
+    "category": "Laboratory and Diagnostic Equipment",
+    "specifications": "Compound light microscope; adjustable objective lenses (4x, 10x, 40x, 100x); mechanical stage; LED or mirror illumination; typically 5–10 kg.",
+    "function": "Allows magnified viewing of blood, urine, or tissue samples on glass slides for diagnosis or training.",
+    "usage": "Wear gloves; set up microscope on a stable surface; place prepared slide on stage; start with lowest magnification; adjust focus and illumination carefully.",
+    "maintenance": "Clean lenses with lens paper; turn off illumination when not in use; cover after use to prevent dust accumulation.",
+    "warning": "Using dirty slides, touching lenses with fingers, forcing focus knobs, or improper cleaning."
+}

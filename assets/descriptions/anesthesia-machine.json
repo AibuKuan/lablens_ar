@@ -1,0 +1,10 @@
+{
+    "name": "Anesthesia Machine",
+    "modelPath": "",
+    "category": "Anesthesia and Respiratory Equipment",
+    "specifications": "Free-standing or portable unit including flowmeters, vaporizers, breathing system, ventilator, and monitors; stainless steel and composite materials; typically 50–150 kg.",
+    "function": "Delivers controlled mixtures of anesthetic gases and oxygen to patients during surgical procedures.",
+    "usage": "Wear PPE (mask, gloves); check cylinder gases and connections; set gas flow and vaporizer; monitor the patient and alarms continuously throughout the procedure.",
+    "maintenance": "Perform daily function checks; ensure all connections are secure; follow cleaning and disinfection procedures for reusable parts after each use.",
+    "warning": "Failure to check for leaks, neglecting equipment calibration, or incorrect vaporizer settings."
+}

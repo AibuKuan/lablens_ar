@@ -1,0 +1,10 @@
+{
+    "name": "Microscope Slide",
+    "modelPath": "",
+    "category": "Laboratory Consumables",
+    "specifications": "Rectangular glass plate (~75 x 25 mm, 1 mm thick) with a smooth, transparent surface.",
+    "function": "Used to hold and prepare specimens for examination under a microscope.",
+    "usage": "Wear gloves; use forceps to handle slides; place a drop of sample on the slide, cover with a cover slip, then place on the microscope stage.",
+    "maintenance": "Handle by the edges; dispose of broken slides in a sharps container; clean for reuse according to lab guidelines.",
+    "warning": "Touching the flat surface, causing contamination or breakage."
+}
