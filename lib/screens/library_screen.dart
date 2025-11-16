@@ -26,9 +26,12 @@ class _LibraryScreenState extends State<LibraryScreen> {
     @override
     Widget build(BuildContext context) {
         return SafeArea(
-            child: Column(
+            child: ListView(
                 children: [
-                    Text("Library Screen"),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                      child: Text("Library", style: TextStyle(fontSize: 20))
+                    ),
                     for (var equipment in equipments)
                         EquipmentRow(equipment: equipment),
                     // EquipmentRow(equipment: ),

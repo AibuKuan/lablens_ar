@@ -112,7 +112,7 @@ class _EquipmentRowState extends State<EquipmentRow> {
                               fontSize: 14,
                               color: Colors.black87,
                             ),
-                            maxLines: 1,
+                            maxLines: 2,
                             overflow: TextOverflow.ellipsis,
                           ),
                         ),
