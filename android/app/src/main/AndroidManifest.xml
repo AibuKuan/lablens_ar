@@ -4,9 +4,9 @@
     <uses-feature android:name="android.hardware.camera" />
 
     <application
-        android:label="ar_app"
+        android:label="LabLens AR"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/launcher_icon">
         <activity
             android:name=".MainActivity"
             android:exported="true"

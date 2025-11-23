@@ -100,7 +100,7 @@ class _ARViewScreenState extends State<ARViewScreen> {
                             child: ListView(
                               controller: controller,
                               children: [
-                                EquipmentDetail(model: widget.model),
+                                EquipmentDetail(detail: widget.model.detail!),
                               ]
                             )
                           )

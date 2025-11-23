@@ -1,11 +1,11 @@
+import 'package:ar_app/models/equipment.dart';
 import 'package:flutter/material.dart'; // Needed for Theme, Text, Column, etc.
 
-import '../services/model.dart';
 
 class EquipmentDetail extends StatelessWidget {
-  final Model model;
+  final Equipment detail;
 
-  const EquipmentDetail({super.key, required this.model});
+  const EquipmentDetail({super.key, required this.detail});
 
   /// Helper method to build a section (Title + Content) only if content is not null or empty.
   Widget _buildSection(String title, String? content) {
@@ -54,7 +54,7 @@ class EquipmentDetail extends StatelessWidget {
         children: [
           // Main Title
           Text(
-            model.name ?? 'Equipment Details',
+            detail.name,
             style: const TextStyle(
               fontSize: 24,
               fontWeight: FontWeight.bold,
@@ -64,12 +64,12 @@ class EquipmentDetail extends StatelessWidget {
           const Divider(height: 30, thickness: 1.5, color: Colors.blueAccent),
 
           // Build all descriptive sections, automatically skipping empty ones
-          _buildSection('Category', model.category),
-          _buildSection('Function', model.function),
-          _buildSection('Usage', model.usage),
-          _buildSection('Specifications', model.specifications),
-          _buildSection('Maintenance', model.maintenance),
-          _buildSection('Warning/Safety', model.warning),
+          _buildSection('Category', detail.category),
+          _buildSection('Function', detail.function),
+          _buildSection('Usage', detail.usage),
+          _buildSection('Specifications', detail.specifications),
+          _buildSection('Maintenance', detail.maintenance),
+          _buildSection('Warning/Safety', detail.warning),
         ],
       ),
     );

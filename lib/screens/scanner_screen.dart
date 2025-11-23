@@ -51,7 +51,7 @@ class _ScannerScreenState extends State<ScannerScreen> with WidgetsBindingObserv
         final String? code = barcode.rawValue;
         if (code != null) {
           _controller.stop();
-          final model = await Model.create(code);
+          final model = await Model.create(name: code);
           model.exists().then((value) {
             if (!value) {
               ScaffoldMessenger.of(context).showSnackBar(

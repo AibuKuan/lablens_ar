@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:ar_app/models/equipment.dart';
 import 'package:ar_app/utils/asset.dart';
 import 'package:ar_flutter_plugin_2/datatypes/node_types.dart';
 import 'package:ar_flutter_plugin_2/managers/ar_object_manager.dart';
@@ -18,24 +19,34 @@ class Model {
   ARObjectManager? objectManager;
   ARPlaneAnchor? currentAnchor;
 
-  String? name;
-  String? category;
-  String? function;
-  String? usage;
-  String? specifications;
-  String? maintenance;
-  String? warning;
+  Equipment? detail;
 
-  static Future<Model> create(String name) async {
-    final model = Model._internal(name);
-    await model._loadDescription();
+  static Future<Model> create({String? name, Equipment? detail}) async {
+    if (name == null && detail == null) {
+      throw ArgumentError('Either "name" (for asset lookup) or "detail" (for direct URL/path) must be provided.');
+    }
+    if (name != null && detail != null) {
+      throw ArgumentError('Only one of "name" or "detail" should be provided.');
+    }
+
+    final model = Model._internal(name ?? "model", detail);
+    if (detail == null) {
+      await model._loadDescription();
+    } else {
+      detail = detail;
+    }
     model._createARNode();
     return model;
   }
   
-  Model._internal(name) {
-    modelPath += "$name.glb";
-    descPath += "$name.json";
+  Model._internal(String name, Equipment? detail) {
+    if (detail != null) {
+      modelPath = detail.modelPath;
+      this.detail = detail;
+    } else {
+      modelPath += "$name.glb";
+      descPath += "$name.json";
+    }
   }
 
   Future<void> _loadDescription() async {
@@ -44,13 +55,15 @@ class Model {
       
       final Map<String, dynamic> description = jsonDecode(jsonString);
 
-      name = description['name'];
-      category = description['category'];
-      function = description['function'];
-      usage = description['usage'];
-      specifications = description['specifications'];
-      maintenance = description['maintenance'];
-      warning = description['warning'];
+      detail = Equipment.fromJson(description);
+
+      // name = description['name'];
+      // category = description['category'];
+      // function = description['function'];
+      // usage = description['usage'];
+      // specifications = description['specifications'];
+      // maintenance = description['maintenance'];
+      // warning = description['warning'];
     } catch (e) {
       print('Error loading description file $descPath: $e');
       // Set properties to null to handle missing data gracefully

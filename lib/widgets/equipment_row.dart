@@ -138,10 +138,35 @@ class _EquipmentRowState extends State<EquipmentRow> {
                   Column(
                     children: [
                       IconButton(
-                        onPressed: () {
-                          Model.create(widget.equipment.name).then((model) {
-                            showARView(context, model, () {});
+                        onPressed: () async {
+                          final model = await Model.create(detail: widget.equipment);
+                          model.exists().then((value) {
+                            if (!value) {
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                SnackBar(
+                                  content: Text('Model not found'),
+                                  backgroundColor: Colors.red,
+                                ),
+                              );
+                            } else {
+                              showARView(context, model, () {});
+                            }
                           });
+                          // Model.create(path: widget.equipment.modelPath).then((model) {
+                          //   model.exists().then((value) {
+                          //     if (!value) {
+                          //       ScaffoldMessenger.of(context).showSnackBar(
+                          //         SnackBar(
+                          //           content: Text('Model not found'),
+                          //           backgroundColor: Colors.red,
+                          //         ),
+                          //       );
+                          //     } else {
+                          //       showARView(context, model, () {});
+                          //     }
+                          //   });
+                          //   // showARView(context, model, () {});
+                          // });
                         }, 
                         icon: Icon(
                           Icons.view_in_ar,
