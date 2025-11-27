@@ -1,3 +1,4 @@
+import 'package:ar_app/screens/model_viewer_screen.dart';
 import 'package:ar_app/services/model.dart';
 import 'package:ar_app/utils/ar.dart';
 import 'package:ar_app/utils/asset.dart';
@@ -175,13 +176,21 @@ class _EquipmentRowState extends State<EquipmentRow> {
                         )
                       ),
 
-                      // IconButton(
-                      //   onPressed: () {}, 
-                      //   icon: Icon(
-                      //     Icons.delete,
-                      //     color: Colors.red,
-                      //   )
-                      // )
+                      IconButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => ModelViewerScreen(
+                                modelSrc: widget.equipment.modelPath,
+                              ),
+                            ),
+                          );
+                        }, 
+                        icon: Icon(
+                          Icons.open_with_rounded,
+                        )
+                      )
                     ]
                   )
                   
