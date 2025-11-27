@@ -1,6 +1,6 @@
 {   
     "name": "Flashlight",
-    "model": "asset/model/flashlight.glb",
+    "modelPath": "asset/model/flashlight.glb",
     "category": "Assessment Equipment",
     "specification": "Portable battery-powered LED, plastic or metal, 12-15 cm.",
     "function": "Provides focused light for examinations.",

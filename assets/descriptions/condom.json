@@ -1,6 +1,6 @@
 {
     "name": "Condom",
-    "modelpath": "asset/model/condom.glb",
+    "modelPath": "asset/model/condom.glb",
     "category": "Preventive Care Equipment",
     "specification": "Latex/polyurethane sheath, standard size, sterile pack.",
     "function": "Prevents pregnancy and STIs.",

@@ -1,6 +1,6 @@
 {   
     "name": "IV Pumps",
-    "model": "asset/model/iv-pumps.glb",
+    "modelPath": "asset/model/iv-pumps.glb",
     "category": "IV Therapy Equipment",
     "specification": "Electronic, programmable, motor-driven, flow-rate control.",
     "function": "Delivers precise IV fluids/medications at set rates.",

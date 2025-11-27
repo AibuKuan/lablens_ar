@@ -1,6 +1,6 @@
 {
     "name": "Eye",
-    "modelpath": "asset/model/eye.glb",
+    "modelPath": "asset/model/eye.glb",
     "category": "Educational Anatomy Model",
     "specification": "Enlarged plastic model; detachable lens, cornea, etc.",
     "function": "Visualizes human eye anatomy.",

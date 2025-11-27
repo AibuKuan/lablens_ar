@@ -1,6 +1,6 @@
 {   
     "name": "Otoscope",
-    "modelpath": "asset/model/otoscope.glb",
+    "modelPath": "asset/model/otoscope.glb",
     "category": "Assessment Equipment",
     "specification": "Handheld device with built-in LED light source; lightweight plastic or metal casing; interchangeable specula (3–8 mm diameter); 3X magnification lens; some models include an insufflation port for pneumatic testing.",
     "function": "Used to visually examine the ear canal and tympanic membrane (eardrum) for diagnosis of ear conditions.",

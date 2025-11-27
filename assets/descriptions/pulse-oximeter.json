@@ -1,6 +1,6 @@
 {
   "name": "Pulse Oximeter",
-  "modelpath": "asset/model/pulse-oximeter.glb",
+  "modelPath": "asset/model/pulse-oximeter.glb",
   "category": "Monitoring Equipment",
   "specification": "Finger sensor using red and infrared LEDs; digital LED display showing oxygen saturation (SpO2) and pulse rate; battery powered; lightweight and portable.",
   "function": "Measures arterial oxygen saturation and pulse rate by analyzing light absorption through the skin, typically on the fingertip, without entering the body.",

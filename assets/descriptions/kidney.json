@@ -1,6 +1,6 @@
 {   
     "name": "Kidney",
-    "modelpath": "asset/model/kidney.glb",
+    "modelPath": "asset/model/kidney.glb",
     "category": "Educational Anatomy Model",
     "specification": "Life-size, labeled, detachable demonstration parts.",
     "function": "Displays kidney structure and nephron layout.",

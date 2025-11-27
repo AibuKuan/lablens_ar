@@ -1,6 +1,6 @@
 {   
     "name": "Operating Table",
-    "modelpath": "asset/model/operating-table.glb",
+    "modelPath": "asset/model/operating-table.glb",
     "category": "Surgical Equipment",
     "specification": "Steel frame, padded surface, adjustable tilt/height, lockable wheels.",
     "function": "Supports and positions patients securely for surgical procedures, offering stability with fixed legs and precise manual adjustments.",

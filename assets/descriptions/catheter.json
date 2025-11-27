@@ -1,6 +1,6 @@
 {
     "name": "Catheter",
-    "modelath": "asset/model/catheter.glb",
+    "modelPath": "asset/model/catheter.glb",
     "category": "Urinary Care Equipment",
     "specification": "Sterile silicone/latex, sizes 12-24 French.",
     "function": "Drains urine from bladder.",

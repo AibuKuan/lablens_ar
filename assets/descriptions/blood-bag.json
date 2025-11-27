@@ -1,6 +1,6 @@
 { 
     "name": "Blood Bag",
-    "modelpath": "asset/model/blood-bag.glb",
+    "modelPath": "asset/model/blood-bag.glb",
     "category": "Blood Collection and Transfusion Equipment",
     "specification": "Medical-grade plastic, 450mL volume.",
     "function": "Collects, stores, and administers blood.",

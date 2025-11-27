@@ -1,6 +1,6 @@
 {
   "name": "Pelvic Model",
-  "modelpath": "asset/model/pelvic.glb",
+  "modelPath": "asset/model/pelvic.glb",
   "category": "Educational Anatomy Model",
   "specification": "Life-sized plastic model with labeled and detachable sections depicting pelvic bones, ligaments, vessels, nerves, and reproductive organs; designed to provide 3D spatial understanding.",
   "function": "Facilitates teaching and understanding of pelvic anatomy including bones, muscles, and internal organs; supports hands-on learning and demonstration of anatomical relationships.",

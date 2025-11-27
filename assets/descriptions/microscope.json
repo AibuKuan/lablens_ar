@@ -1,6 +1,6 @@
 {   
     "name": "Microscope",
-    "modelpath": "asset/model/microscope.glb",
+    "modelPath": "asset/model/microscope.glb",
     "category": "Diagnostic Equipment",
     "specification": "Optical; 40x–1000x, glass lenses, mechanical stage.",
     "function": "Magnifies specimens for laboratory examination.",

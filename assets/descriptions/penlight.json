@@ -1,6 +1,6 @@
 {
   "name": "Penlight",
-  "modelpath": "asset/model/penlight.glb",
+  "modelPath": "asset/model/penlight.glb",
   "category": "Assessment Equipment",
   "specification": "Slim, battery-powered LED penlight approximately 13 cm long; lightweight metal or plastic body; high CRI LED for accurate tissue color rendering; powered typically by 1 or 2 AAA batteries.",
   "function": "Illuminates eyes, throat, wounds, and other body parts for clinical examination and diagnostic assessment.",

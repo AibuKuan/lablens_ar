@@ -1,6 +1,6 @@
 {   
     "name": "Hospital Bed",
-    "modelpath": "asset/model/hospital-bed.glb",
+    "modelPath": "asset/model/hospital-bed.glb",
     "category": "Patient Care Equipment",
     "specification": "Metal or plastic frame; adjustable height and head/foot sections, lockable wheels.",
     "function": "Provides flexible, safe resting surface for patients.",

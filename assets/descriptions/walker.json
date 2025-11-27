@@ -1,6 +1,6 @@
 {   
     "name": "Walker",
-    "modelpath": "asset/model/walker.glb",
+    "modelPath": "asset/model/walker.glb",
     "category": "Mobility Aid",
     "specification": "Aluminum frame, four legs, rubber tips, adjustable height.",
     "function": "Assists patient with walking and stability.",

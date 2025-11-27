@@ -1,0 +1,11 @@
+{
+    "name": "Basin Plastic",
+    "modelpath": "asset/model/basin-plastic.glb",
+    "category": "Sanitation and Patient Care Equipment",
+    "specification": "Durable plastic, 30cm diameter.",
+    "function": "Holds fluids for cleaning or patient hygiene.",
+    "usage": "Clean and disinfect before and after use.",
+    "maintenance": "Check for cracks; store dry.",
+    "warning": "Discard cracked basins; improper cleaning risks infection."
+
+  }

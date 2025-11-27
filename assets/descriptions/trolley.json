@@ -1,6 +1,6 @@
 {   
     "name": "Trolley",
-    "modelpath": "asset/model/trolley.glb",
+    "modelPath": "asset/model/trolley.glb",
     "category": "Storage and Transport Equipment",
     "specification": "Stainless steel, multiple trays, lockable wheels.",
     "function": "Organizes and transports surgical instruments.",

@@ -1,6 +1,6 @@
 {   
     "name": "Human Skull",
-    "modelpath": "asset/model/human-skull.glb",
+    "modelPath": "asset/model/human-skull.glb",
     "category": "Educational Anatomy Model",
     "specification": "Plastic, life-size, removable sections.",
     "function": "Shows anatomy of the human skull.",

@@ -1,6 +1,6 @@
 {   
     "name": "Surgical Gloves",
-    "modelpath": "asset/model/surgical-gloves.glb",
+    "modelPath": "asset/model/surgical-gloves.glb",
     "category": "Personal Protective Equipment",
     "specification": "Sterile latex/nitrile, powder-free, various sizes.",
     "function": "Protects from contamination during procedures.",

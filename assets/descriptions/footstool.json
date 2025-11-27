@@ -1,6 +1,6 @@
 {   
 "name": "Footstool",
-    "model": "asset/model/footstool.glb",
+    "modelPath": "asset/model/footstool.glb",
     "category": "Patient Care Support Equipment",
     "specification": "Sturdy plastic and metal, non-slip surface, 20–30cm height.",
     "function": "Assists patients or staff to reach elevated areas safely.",

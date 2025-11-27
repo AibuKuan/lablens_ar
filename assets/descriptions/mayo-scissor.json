@@ -1,6 +1,6 @@
 {   
     "name": "Mayo Scissor",
-    "modelpath": "asset/model/mayo-scissor.glb",
+    "modelPath": "asset/model/mayo-scissor.glb",
     "category": "Surgical Equipment",
     "specification": "Stainless, ~15cm, straight/curved tips.",
     "function": "Cuts tissues or surgical dressings.",

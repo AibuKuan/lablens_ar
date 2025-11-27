@@ -1,6 +1,6 @@
 {
     "name": "Drinking Glass",
-    "modelpath": "asset/model/drinking-glass.glb",
+    "modelPath": "asset/model/drinking-glass.glb",
     "category": "Food Service Equipment",
     "specification": "Glass or plastic, ~200-300mL, smooth rim.",
     "function": "Holds fluids for drinking.",

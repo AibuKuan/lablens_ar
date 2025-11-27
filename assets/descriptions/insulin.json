@@ -1,6 +1,6 @@
 {   
     "name": "Insulin",
-    "modelpath": "asset/model/insulin.glb",
+    "modelPath": "asset/model/insulin.glb",
     "category": "Medication",
     "specification": "Injectable solution in vial or pen; various concentrations.",
     "function": "Lowers blood sugar levels in diabetic patients.",

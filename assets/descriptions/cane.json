@@ -1,6 +1,6 @@
 { 
     "name": "Cane",
-    "modelpath": "asset/model/cane.glb",
+    "modelPath": "asset/model/cane.glb",
     "category": "Mobility Aid",
     "specification": "Wood, rubber tip.",
     "function": "Supports walking and stability.",

@@ -1,6 +1,6 @@
 {
     "name": "Digital Microscope",
-    "modelpath": "asset/model/digital-microscope.glb",
+    "modelPath": "asset/model/digital-microscope.glb",
     "category": "Lab and Diagnostic Equipment",
     "specification": "Camera, optical lens, USB/wireless; 40x-1000x magnification.",
     "function": "Enables detailed specimen examination.",

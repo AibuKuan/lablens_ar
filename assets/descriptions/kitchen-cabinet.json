@@ -1,6 +1,6 @@
 {   
     "name": "Kitchen Dish Cabinet",
-    "modelpath": "asset/model/kitchen-cabinet.glb",
+    "modelPath": "asset/model/kitchen-cabinet.glb",
     "category": "Storage Equipment",
     "specification": "Shelved cabinet, wood/steel, height ~170cm.",
     "function": "Stores clean dishes for food service.",

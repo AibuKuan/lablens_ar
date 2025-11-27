@@ -1,6 +1,6 @@
 {   
     "name": "Measuring Cup Plastic",
-    "modelpath": "asset/model/measuring-cup.glb",
+    "modelPath": "asset/model/measuring-cup.glb",
     "category": "Preparation Equipment",
     "specification": "Plastic, transparent, marked increments, 250–1000mL.",
     "function": "Measures and pours accurate fluid quantities.",

@@ -1,6 +1,6 @@
 {   
     "name": "Hospital Operating Light",
-    "modelpath": "asset/model/operating-light.glb",
+    "modelPath": "asset/model/operating-light.glb",
     "category": "Surgical Equipment",
     "specification": "LED array, adjustable arm, shadow-free illumination.",
     "function": "Provides bright directional light for surgeries.",

@@ -1,6 +1,6 @@
 { 
     "name": "Breast Pump",
-    "modelpath": "asset/model/breast-pump.glb",
+    "modelPath": "asset/model/breast-pump.glb",
     "category": "Patient Care Equipment",
     "specification": "Manual or electric, plastic/silicone shield, adjustable suction.",
     "function": "Extracts breast milk.",

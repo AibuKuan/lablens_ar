@@ -1,6 +1,6 @@
 {   
     "name": "Weighing Scale",
-    "modelpath": "asset/model/weighing-scale.glb",
+    "modelPath": "asset/model/weighing-scale.glb",
     "category": "Monitoring Equipment",
     "specification": "Mechanical or digital, platform, capacity 200kg.",
     "function": "Measures patient weight.",

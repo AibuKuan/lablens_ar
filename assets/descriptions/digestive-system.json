@@ -1,6 +1,6 @@
 {
     "name": "Digestive System",
-    "modelpath": "asset/model/digestive-system.glb",
+    "modelPath": "asset/model/digestive-system.glb",
     "category": "Educational Anatomy Model",
     "specification": "Plastic, life-size, detachable parts.",
     "function": "Illustrates digestive anatomy.",

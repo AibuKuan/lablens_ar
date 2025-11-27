@@ -1,6 +1,6 @@
 {
   "name": "Storage Container",
-  "modelpath": "asset/model/storage-container.glb",
+  "modelPath": "asset/model/storage-container.glb",
   "category": "Storage Equipment",
   "specification": "Plastic container, translucent with airtight lid; available in sizes ranging from 1 to 10 liters; durable and lightweight.",
   "function": "Safely stores medical equipment, supplies, and materials to protect them from contamination and damage.",

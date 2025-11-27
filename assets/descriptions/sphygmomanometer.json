@@ -1,6 +1,6 @@
 {
   "name": "Sphygmomanometer",
-  "modelpath": "asset/model/sphygmomanometer.glb",
+  "modelPath": "asset/model/sphygmomanometer.glb",
   "category": "Assessment/Monitoring Equipment",
   "specification": "Available as manual or electronic; includes an inflatable cuff, pressure gauge or digital display; designed to measure blood pressure in mmHg.",
   "function": "Used to measure systolic and diastolic blood pressure by occluding and then releasing blood flow in the brachial artery.",

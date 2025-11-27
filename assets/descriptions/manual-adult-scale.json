@@ -1,6 +1,6 @@
 {   
     "name": "Manual Adult Scale",
-    "modelpath": "asset/model/manual-adult-scale.glb",
+    "modelPath": "asset/model/manual-adult-scale.glb",
     "category": "Monitoring Equipment",
     "specification": "Mechanical/analog with dial or balance beam; up to 200kg.",
     "function": "Measures adult patient weight.",

@@ -1,6 +1,6 @@
 {   
     "name": "Wheelchair",
-    "modepath": "asset/model/wheelchair.glb",
+    "modelPath": "asset/model/wheelchair.glb",
     "category": "Mobility Aid",
     "specification": "Steel/aluminum, locking wheels, cushioned seat, leg/foot rests.",
     "function": "Helps transport patients with mobility impairment.",

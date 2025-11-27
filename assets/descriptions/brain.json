@@ -1,6 +1,6 @@
 { 
     "name": "Brain",
-    "modelpath": "asset/model/brain.glb",
+    "modelPath": "asset/model/brain.glb",
     "category": "Educational Anatomy Model",
     "specification": "Plastic, life-size, labeled sections.",
     "function": "Visualizes brain anatomy for teaching.",

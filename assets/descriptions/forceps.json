@@ -1,6 +1,6 @@
 {   
    "name": "Forceps",
-    "modelpath": "asset/model/forceps.glb",
+    "modelPath": "asset/model/forceps.glb",
     "category": "Surgical and Wound Care Equipment",
     "specification": "Stainless steel; straight or curved, locking or non-locking jaws.",
     "function": "Grips or manipulates tissues and materials during procedures.",

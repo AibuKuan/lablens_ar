@@ -1,6 +1,6 @@
 {
   "name": "Stomach",
-  "modelpath": "asset/model/stomach.glb",
+  "modelPath": "asset/model/stomach.glb",
   "category": "Educational Anatomy Model",
   "specification": "Plastic, life-size, with detachable front half for detailed cross-sectional study of stomach layers, vessels, nerves, and mucosa.",
   "function": "Displays the anatomical structure and function of the stomach, including its role in digestion and nutrient processing.",

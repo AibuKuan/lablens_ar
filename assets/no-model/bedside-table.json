@@ -1,0 +1,10 @@
+{
+    "name": "Bedside Table",
+    "modelpath": "asset/model/bedside-table.glb",
+    "category": "Patient Care Equipment",
+    "specification": "Height-adjustable, wheels, ~70-90cm high.",
+    "function": "Holds personal items within reach.",
+    "usage": "Position and lock wheels; place items carefully.",
+    "maintenance": "Clean routinely; inspect for stability.",
+    "warning": "Unlocked wheels or dirty surfaces present hazards."
+  }

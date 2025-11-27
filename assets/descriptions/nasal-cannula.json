@@ -1,6 +1,6 @@
 {   
     "name": "High-Flow Nasal Cannula",
-    "modelpath": "asset/model/nasal-cannula.glb",
+    "modelPath": "asset/model/nasal-cannula.glb",
     "category": "Respiratory Care Equipment",
     "specification": "Soft silicone nasal prongs, oxygen tubing, adjustable flow meter.",
     "function": "Delivers humidified, high-flow oxygen therapy.",

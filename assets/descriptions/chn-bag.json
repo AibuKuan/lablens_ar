@@ -1,6 +1,6 @@
 {
     "name": "Community Health Nursing Bag",
-    "modelpath": "asset/model/chn-bag.glb",
+    "modelPath": "asset/model/chn-bag.glb",
     "category": "Mobile Care Equipment",
     "specification": "Waterproof fabric, multiple compartments, 40x30x15cm.",
     "function": "Carries supplies for community health visits.",

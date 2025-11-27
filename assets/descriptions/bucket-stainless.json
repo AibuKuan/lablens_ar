@@ -1,6 +1,6 @@
 {   
     "name": "Bucket Stainless Steel",
-    "modelpath": "asset/model/bucket-stainless.glb",
+    "modelPath": "asset/model/bucket-stainless.glb",
     "category": "Sanitation Equipment",
     "specification": "Stainless, ~8–12L, handle, corrosion-resistant.",
     "function": "Holds and transports water or cleaning solutions.",

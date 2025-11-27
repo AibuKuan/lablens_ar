@@ -1,6 +1,6 @@
 {   
     "name": "Vacuum Blood Tube",
-    "modelpath": "asset/model/vacuum-blood-tube.glb",
+    "modelPath": "asset/model/vacuum-blood-tube.glb",
     "category": "Blood Collection Equipment",
     "specification": "Plastic/glass, vacuum, 2–10mL, color-coded.",
     "function": "Collects blood for laboratory testing.",

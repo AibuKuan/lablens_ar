@@ -1,6 +1,6 @@
 {   
     "name": "Measuring Spoon",
-    "modelpath": "asset/model/measuring-spoon.glb",
+    "modelPath": "asset/model/measuring-spoon.glb",
     "category": "Preparation Equipment",
     "specification": "Plastic/metal set; marked 1–15mL.",
     "function": "Accurately measures medication or cooking ingredients.",

@@ -1,6 +1,6 @@
 {
     "name": "Cookware",
-    "model": "asset/model/cookware.glb",
+    "modelPath": "asset/model/cookware.glb",
     "category": "Food Preparation Equipment",
     "specification": "Stainless/aluminum, various sizes.",
     "function": "Prepares food and specialized diets.",

@@ -1,0 +1,11 @@
+{
+    "name": "Bedpan Stainless",
+    "modelpath": "asset/model/bedpan-stainless.glb",
+    "category": "Patient Care Equipment",
+    "specification": "Stainless steel, contoured, ~30x20cm.",
+    "function": "Collects urine and feces for immobile patients.",
+    "usage": "Wear gloves; position carefully; remove and empty promptly.",
+    "maintenance": "Disinfect after each use; inspect for cracks.",
+    "warning": "Improper placement causes discomfort; delayed emptying increases risk."
+
+  }

@@ -1,6 +1,6 @@
 {
   "name": "Oxygen Regulator",
-  "modelpath": "asset/model/oxygen-regulator.glb",
+  "modelPath": "asset/model/oxygen-regulator.glb",
   "category": "Respiratory Care Equipment",
   "specification": "Pressure gauge, adjustable flow meter, equipped with a durable neoprene diaphragm and sintered filter for safety; standard DISS or CGA connections for oxygen tanks.",
   "function": "Controls and regulates the flow and pressure of oxygen delivered from a tank to the patient, ensuring safe and precise oxygen therapy.",

@@ -1,6 +1,6 @@
 {   
     "name": "Facemask",
-    "modelpath": "asset/model/facemask.glb",
+    "modelPath": "asset/model/facemask.glb",
     "category": "Personal Protective Equipment",
     "specification": "Medical or surgical mask, disposable, ear loops, multi-layer fabric.",
     "function": "Protects against inhaling airborne pathogens and droplets.",

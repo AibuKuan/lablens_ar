@@ -1,6 +1,6 @@
 {
   "name": "Stethoscope",
-  "modelpath": "asset/model/stethoscope.glb",
+  "modelPath": "asset/model/stethoscope.glb",
   "category": "Assessment Equipment",
   "specification": "Flexible tubing connecting stainless steel chestpiece (with diaphragm and bell) to soft ear tips; includes metal stem linking chestpiece and tubing; designed for clear sound transmission.",
   "function": "Amplifies internal body sounds such as heartbeats, lung sounds, and bowel movements for diagnostic assessment.",

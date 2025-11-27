@@ -1,6 +1,6 @@
 {   
     "name": "Human Heart",
-    "modelpath": "asset/model/human-heart.glb",
+    "modelPath": "asset/model/human-heart.glb",
     "category": "Educational Anatomy Model",
     "specification": "Life-size, detachable parts, labeled chambers.",
     "function": "Shows external heart anatomy for study.",

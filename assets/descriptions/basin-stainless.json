@@ -1,6 +1,6 @@
 {
     "name": "Basin Stainless",
-    "modelpath": "asset/model/basin-stainless.glb",
+    "modelPath": "asset/model/basin-stainless.glb",
     "category": "Sanitation and Patient Care Equipment",
     "specification": "Round, ~30cm diameter, corrosion-resistant, smooth edge.",
     "function": "Holds fluids for patient hygiene, wound cleaning, or specimen collection.",

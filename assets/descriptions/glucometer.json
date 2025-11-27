@@ -1,6 +1,6 @@
 {   
    "name": "Glucometer",
-    "modelpath": "asset/model/glucometer.glb",
+    "modelPath": "asset/model/glucometer.glb",
     "category": "Monitoring Equipment",
     "specification": "Handheld digital device, LCD display, uses disposable strips.",
     "function": "Analyzes blood glucose levels.",

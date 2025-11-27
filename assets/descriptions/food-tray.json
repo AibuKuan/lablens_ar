@@ -1,6 +1,6 @@
 {   
     "name": "Food Tray",
-    "modelpath": "asset/model/food-tray.glb",
+    "modelPath": "asset/model/food-tray.glb",
     "category": "Sanitation Equipment",
     "specification": "Stainless steel tray, ~40x30cm, raised edge.",
     "function": "Transports or serves food safely.",

@@ -1,6 +1,6 @@
 {   
     "name": "Stretcher ER",
-    "modelpath": "asset/model/stretcher-er.glb",
+    "modelPath": "asset/model/stretcher-er.glb",
     "category": "Transport Equipment",
     "specification": "Metal frame, mattress, safety straps, designed for manual carrying.",
     "function": "Used to manually transport patients in emergency situations, providing stable support during lifting and carrying.",

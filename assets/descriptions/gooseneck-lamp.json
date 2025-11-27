@@ -1,6 +1,6 @@
 {
   "name": "Goose Lamp",
-  "modelpath": "asset/model/gooseneck-lamp.glb",
+  "modelPath": "asset/model/gooseneck-lamp.glb",
   "category": "Medical Examination Equipment",
   "specification": "Chrome-plated or anodized aluminum gooseneck (12–16\" long, 360° adjustable); height adjustable from 48\" to 74\"; weighted steel base (11\" diameter); uses 60W incandescent or 13W CFL / 12W LED equivalent; 7–8 ft grounded 3-prong cord; UL listed; cool-shade design.",
   "function": "Provides bright, focused, and adjustable illumination for medical examinations and minor procedures.",

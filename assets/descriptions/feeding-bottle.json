@@ -1,6 +1,6 @@
 {   
     "name": "Feeding Bottle",
-    "modelpath": "asset/model/feeding-bottle.glb",
+    "modelPath": "asset/model/feeding-bottle.glb",
     "category": "Patient Care Equipment",
     "specification": "Plastic or glass, 120–250 mL, silicone nipple, clear measuring marks.",
     "function": "Feeds infants using formula or expressed milk.",

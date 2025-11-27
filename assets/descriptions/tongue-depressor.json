@@ -1,6 +1,6 @@
 {   
     "name": "Tongue Depressor",
-    "modelpath": "asset/model/tongue-depressor.glb",
+    "modelPath": "asset/model/tongue-depressor.glb",
     "category": "Assessment Equipment",
     "specification": "Flat wooden/plastic stick, ~15cm.",
     "function": "Holds tongue down for mouth/throat exams.",

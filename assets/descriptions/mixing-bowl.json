@@ -1,6 +1,6 @@
 {   
     "name": "Mixing Bowl",
-    "modelpath": "asset/model/mixing-bowl.glb",
+    "modelPath": "asset/model/mixing-bowl.glb",
     "category": "Preparation Equipment",
     "specification": "Stainless, 1–2L, deep round.",
     "function": "Used to mix ingredients for food or medications.",

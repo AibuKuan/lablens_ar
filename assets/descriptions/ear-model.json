@@ -1,6 +1,6 @@
 {
     "name": "Ear Teaching Model",
-    "modelpath": "asset/model/ear-model.glb",
+    "modelPath": "asset/model/ear-model.glb",
     "category": "Educational Anatomy Model",
     "specification": "Enlarged plastic model; labeled anatomy.",
     "function": "Demonstrates ear structure and pathology.",

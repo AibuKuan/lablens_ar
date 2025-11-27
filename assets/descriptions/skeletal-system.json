@@ -1,6 +1,6 @@
 {
   "name": "Skeletal System",
-  "modelpath": "asset/model/skeletal-system.glb",
+  "modelPath": "asset/model/skeletal-system.glb",
   "category": "Educational Anatomy Model",
   "specification": "Life-size plastic model with labeled bones and movable joints to demonstrate articulation.",
   "function": "Provides a detailed representation of human bone structure useful for study and teaching purposes.",

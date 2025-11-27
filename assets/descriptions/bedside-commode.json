@@ -1,7 +1,7 @@
 {
     
    "name": "Bedside Commode",
-    "modelpath": "asset/model/bedside-commode.glb",
+    "modelPath": "asset/model/bedside-commode.glb",
     "category": "Patient Care Equipment",
     "specification": "Steel/plastic frame, removable bucket, seat height ~45cm.",
     "function": "Allows patients with mobility issues to use a toilet seat at bedside.",
