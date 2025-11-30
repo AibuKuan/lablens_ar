@@ -1,6 +1,6 @@
 {
     "name":  "Tuning Fork",
-    "modelPath":  "assets/models/tuning-fork.glb",
+    "modelPath":  "assets/models/tuning-forks.glb",
     "category":  "Assessment Equipment",
     "specification":  "Made of steel or aluminum; standard frequency of 512 Hz; approximately 10 cm in length.",
     "function":  "Tests vibratory sensation and hearing.",
