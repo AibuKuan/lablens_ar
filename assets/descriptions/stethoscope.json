@@ -6,5 +6,19 @@
     "function":  "Amplifies internal body sounds such as heartbeats, lung sounds, and bowel movements for diagnostic assessment.",
     "usage":  "Place the chestpiece directly on patient’s skin; use diaphragm side for high-pitched sounds and bell side for low-pitched sounds; listen carefully through earpieces.",
     "maintenance":  "Clean ear tips, tubing, and chestpiece regularly using alcohol wipes; inspect for damage or wear; replace parts as needed to maintain sound quality.",
-    "warning":  "Using a dirty or damaged stethoscope can spread infection and reduce acoustic clarity."
+    "warning":  "Using a dirty or damaged stethoscope can spread infection and reduce acoustic clarity.",
+    "animation": {
+        "Bell": [
+            "bellModel",
+            "bellDialog"
+        ],
+        "Ear Tips": [
+            "eartipsModel",
+            "eartipsDialog"
+        ],
+        "Tubing": [
+            "tubingModel",
+            "tubingDialog"
+        ]
+    }
 }

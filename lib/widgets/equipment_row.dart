@@ -182,7 +182,7 @@ class _EquipmentRowState extends State<EquipmentRow> {
                             context,
                             MaterialPageRoute(
                               builder: (context) => ModelViewerScreen(
-                                modelSrc: widget.equipment.modelPath,
+                                equipment: widget.equipment,
                               ),
                             ),
                           );

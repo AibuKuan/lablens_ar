@@ -7,6 +7,7 @@ class Equipment {
   String? usage;
   String? maintenance;
   String? warning;
+  Object? animations;
 
   Equipment(
     this.name, 
@@ -16,7 +17,8 @@ class Equipment {
     this.specifications, 
     this.usage, 
     this.maintenance, 
-    this.warning
+    this.warning,
+    this.animations,
   );
 
   factory Equipment.fromJson(Map<String, dynamic> json) {
@@ -29,6 +31,7 @@ class Equipment {
       json['usage'],
       json['maintenance'],
       json['warning'],
+      json['animations'] ?? {},
     );
   }
 }

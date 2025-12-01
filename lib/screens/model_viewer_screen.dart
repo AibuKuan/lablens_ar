@@ -1,33 +1,45 @@
+import 'package:ar_app/models/equipment.dart';
 import 'package:flutter/material.dart';
-import 'package:model_viewer_plus/model_viewer_plus.dart';
+import 'package:flutter_3d_controller/flutter_3d_controller.dart';
 
-class ModelViewerScreen extends StatelessWidget {
-  // 1. Define the property to hold the model source path
-  final String modelSrc;
 
-  // 2. Require the modelSrc in the constructor
-  ModelViewerScreen({
+// Custom widget to display the 3D model and equipment details
+class ModelViewerScreen extends StatefulWidget {
+  final Equipment equipment;
+
+  const ModelViewerScreen({
     super.key,
-    required this.modelSrc,
+    required this.equipment,
   });
 
   @override
+  State<ModelViewerScreen> createState() => _ModelViewerScreenState();
+}
+
+class _ModelViewerScreenState extends State<ModelViewerScreen> {
+  final Flutter3DController _controller = Flutter3DController();
+
+  @override
   Widget build(BuildContext context) {
-    // Uses a Stack and Positioned.fill to ensure the ModelViewer 
-    // takes up the entire available screen space.
-    return Stack(
-      children: [
-        Positioned.fill(
-          child: ModelViewer(
-            // 3. Use the dynamic model source here
-            src: modelSrc, 
-            autoRotate: true,
-            cameraControls: true,
-            backgroundColor: const Color.fromARGB(0xFF, 0xEE, 0xEE, 0xEE),
-            ar: true,
-          ),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('${widget.equipment.name} 3D View'),
+        backgroundColor: Colors.blueGrey,
+      ),
+      body: Container(
+        color: Colors.grey[200],
+        child: Flutter3DViewer(
+          controller: _controller,
+          // Replace with your actual model path handling
+          src: widget.equipment.modelPath,
+          // Optional: Listen for load events
+          onLoad: (value) {
+            debugPrint('3D model loaded: ${widget.equipment.name}');
+            _controller.playAnimation(animationName: "bellModel");
+            _controller.playAnimation(animationName: "bellDialog");
+          },
         ),
-      ],
+      ),
     );
   }
 }
