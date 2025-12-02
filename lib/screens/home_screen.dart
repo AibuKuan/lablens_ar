@@ -156,7 +156,7 @@ class HomeScreen extends StatelessWidget {
             subtitle: 'Scan QR codes to launch 3D models in Augmented Reality.',
             details: [
               'Use this module to scan a QR code associated with an equipment.',
-              'The scan will automatically load the equipment\'s 3D model and show it in Augmented Reality mode.',
+              'The scan will automatically load the equipment\'s 3D model and show it in either Augmented Reality mode or the 3D Viewer.',
             ],
           ),
           

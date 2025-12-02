@@ -1,3 +1,4 @@
+import 'package:ar_app/screens/model_viewer_screen.dart';
 import 'package:ar_app/services/model.dart';
 import 'package:ar_app/utils/ar.dart';
 import 'package:ar_app/widgets/qr_scanner_overlay.dart';
@@ -51,23 +52,25 @@ class _ScannerScreenState extends State<ScannerScreen> with WidgetsBindingObserv
     _controller.start().whenComplete(() => _isStarting = false);
   }
 
-  Future<void> _showConfirmationDialog(BuildContext context, Model model) async {
-    final bool? shouldOpen = await showDialog<bool>(
+  // The return type is changed to Future<String?> to handle the possible outcomes
+  Future<void> _showViewOptionsDialog(BuildContext context, Model model) async {
+    // We expect one of three results: 'ar', 'viewer', or null (if canceled/dismissed)
+    final String? actionChoice = await showDialog<String>(
       context: context,
-      barrierDismissible: false, // User must tap a button
+      barrierDismissible: true, // Allow user to dismiss by tapping outside
       builder: (BuildContext dialogContext) {
         return AlertDialog(
-          title: const Text('View AR Model'),
+          title: const Text('View Model Options'),
           content: RichText(
             text: TextSpan(
               style: TextStyle(
-                fontSize: 14.0, // Default text size in dialogs
+                fontSize: 14.0,
                 color: Theme.of(dialogContext).textTheme.bodyLarge?.color,
               ),
               children: <TextSpan>[
-                const TextSpan(text: 'Do you want to open the AR view for model: '),
+                const TextSpan(text: 'How do you want to view the model: '),
                 TextSpan(
-                  text: '${model.detail?.name}', // Assuming you meant model.name from the previous context
+                  text: model.detail?.name,
                   style: const TextStyle(fontWeight: FontWeight.bold),
                 ),
                 const TextSpan(text: '?'),
@@ -75,16 +78,27 @@ class _ScannerScreenState extends State<ScannerScreen> with WidgetsBindingObserv
             ),
           ),
           actions: <Widget>[
+            // 1. CANCEL Button (Restarts scanner)
             TextButton(
               child: const Text('CANCEL'),
               onPressed: () {
-                Navigator.of(dialogContext).pop(false); // User canceled
+                Navigator.of(dialogContext).pop('cancel'); 
               },
             ),
+            
+            // 2. MODEL VIEWER Button
             TextButton(
-              child: const Text('YES'),
+              child: const Text('3D VIEWER'),
               onPressed: () {
-                Navigator.of(dialogContext).pop(true); // User confirmed
+                Navigator.of(dialogContext).pop('viewer'); 
+              },
+            ),
+            
+            // 3. AR VIEW Button
+            TextButton(
+              child: const Text('AR VIEW'),
+              onPressed: () {
+                Navigator.of(dialogContext).pop('ar'); 
               },
             ),
           ],
@@ -92,11 +106,25 @@ class _ScannerScreenState extends State<ScannerScreen> with WidgetsBindingObserv
       },
     );
 
-    // Act based on the dialog result
-    if (shouldOpen == true) {
+    // --- ACT BASED ON THE DIALOG RESULT ---
+    if (actionChoice == 'ar') {
+      // Open AR View
       showARView(context, model, _restartScanner);
+    } else if (actionChoice == 'viewer') {
+      // Open 2D Model Viewer
+      // NOTE: I'm replacing widget.equipment with 'model' assuming that 'model' 
+      // contains the necessary data you pass to ModelViewerScreen.
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => ModelViewerScreen(
+            // Pass the necessary data (e.g., the scanned model)
+            equipment: model.detail!, 
+          ),
+        ),
+      ).then((_) => _restartScanner()); // Restart scanner when viewer is closed
     } else {
-      // If canceled, restart the scanner immediately
+      // If canceled or dismissed, restart the scanner
       _restartScanner();
     }
   }
@@ -148,7 +176,7 @@ class _ScannerScreenState extends State<ScannerScreen> with WidgetsBindingObserv
               );
               _restartScanner();
             } else {
-              _showConfirmationDialog(context, model);
+              _showViewOptionsDialog(context, model);
             }
           });
         }
