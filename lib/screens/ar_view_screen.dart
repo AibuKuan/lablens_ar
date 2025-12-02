@@ -1,4 +1,5 @@
 import 'package:ar_app/widgets/equipment_detail.dart';
+import 'package:ar_app/widgets/jumping_arrow_indicator.dart';
 import 'package:ar_flutter_plugin_2/ar_flutter_plugin.dart';
 import 'package:ar_flutter_plugin_2/datatypes/config_planedetection.dart';
 import 'package:ar_flutter_plugin_2/datatypes/hittest_result_types.dart';
@@ -125,7 +126,38 @@ class _ARViewScreenState extends State<ARViewScreen> {
               bottom: 50,
               right: 10,
               child: ModelScaler(onChanged: widget.model.scale)
-            )
+            ),
+
+            Positioned(
+              left: 0,
+              right: 0,
+              bottom: 0, // Pin the indicator to the very bottom
+              child: Center(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    // Option A: The classic arrow indicator
+                    const JumpingArrowIndicator(),
+            
+                    const SizedBox(height: 10),
+                    
+                    // Option B: The modern "Grabber" bar (less height, common in mobile drawers)
+                    /*
+                    Container(
+                      width: 40,
+                      height: 4,
+                      decoration: BoxDecoration(
+                        color: Colors.white70,
+                        borderRadius: BorderRadius.circular(2),
+                      ),
+                    ),
+                    */
+
+                    const SizedBox(height: 10), // Optional: Padding above the actual screen edge
+                  ],
+                ),
+              ),
+            ),
           ]
         )
       )
