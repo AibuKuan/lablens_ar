@@ -121,15 +121,11 @@ class _ARViewScreenState extends State<ARViewScreen> {
             ),
 
             Positioned(
-              bottom: 0, // Align to the very bottom edge of the Stack
-              left: 0,
-              right: 0, // Stretch across the full width
-              child: Container( // Wrap the scaler in a container to give it background/padding
-                padding: const EdgeInsets.symmetric(vertical: 20),
-                color: Colors.black54, // Ensures visibility over the AR background
-                child: ModelScaler(onChanged: widget.model.scale),
-              ),
-            ),
+              top: 50,
+              bottom: 50,
+              right: 10,
+              child: ModelScaler(onChanged: widget.model.scale)
+            )
           ]
         )
       )
