@@ -1,10 +1,8 @@
-import 'dart:convert';
-
 import 'package:ar_app/models/equipment.dart';
-import 'package:ar_app/utils/asset.dart';
+import 'package:ar_app/services/description.dart';
 import 'package:ar_app/widgets/equipment_row.dart';
+import 'package:ar_app/widgets/search_form.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 class LibraryScreen extends StatefulWidget {
     const LibraryScreen({super.key});
@@ -16,11 +14,11 @@ class LibraryScreen extends StatefulWidget {
 class _LibraryScreenState extends State<LibraryScreen> {
     List<Equipment> equipments = [];
     // Equipment dummy = Equipment("Dummy", "assets/models/ambu-bag.glb", "dummy", "dummy", "dummy", "dummy", "dummy", "dummy");
-    
+
     @override
     void initState() {
         super.initState();
-        _loadManifest().whenComplete(() => setState(() {}));
+        // _loadManifest().whenComplete(() => setState(() {}));
     }
 
     @override
@@ -30,9 +28,22 @@ class _LibraryScreenState extends State<LibraryScreen> {
                 children: [
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                      child: Text("Library", style: TextStyle(fontSize: 20))
+                      child: Column(
+                        children: [
+                          Text("Library", style: TextStyle(fontSize: 20)),
+                          SearchForm(
+                            categories: EquipmentManager().categories, 
+                            onChange: (String? query, Map? categories) {
+                              EquipmentManager().searchEquipments(query);
+                              EquipmentManager().searchCategories(categories);
+                              if (!mounted) return;
+                              setState(() {});
+                            }
+                          ),
+                        ],
+                      )
                     ),
-                    for (var equipment in equipments)
+                    for (var equipment in EquipmentManager().equipmentsFiltered)
                         EquipmentRow(equipment: equipment),
                     // EquipmentRow(equipment: ),
                 ],
@@ -40,14 +51,14 @@ class _LibraryScreenState extends State<LibraryScreen> {
         );
     }
 
-    Future<void> _loadManifest() async {
-        final manifest = jsonDecode(await rootBundle.loadString('AssetManifest.json'));
+  // Future<void> _loadManifest() async {
+  //   final String response = await rootBundle.loadString('assets/descriptions/combined_equipment.json');
+  //   final Map<String, dynamic> data = jsonDecode(response);
 
-        final descriptionFiles = manifest.keys.where((path) => path.startsWith('assets/descriptions/') && path.endsWith('.json')).toList();
-
-        equipments = [];
-        for (var file in descriptionFiles) {
-            equipments.add(Equipment.fromJson(await loadJsonAsset(file)));
-        }
-    }
+  //   equipments = data.entries.map((entry) {
+  //     // entry.key is the "name"
+  //     // entry.value is the map containing {"other": value}
+  //     return Equipment.fromJson(entry.key, entry.value);
+  //   }).toList();
+  // }
 }

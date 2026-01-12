@@ -1,5 +1,6 @@
 class Equipment {
   String name;
+  String modelName;
   String modelPath;
   String? category;
   String? specifications;
@@ -11,6 +12,7 @@ class Equipment {
 
   Equipment(
     this.name, 
+    this.modelName,
     this.modelPath,
     this.category, 
     this.function, 
@@ -21,9 +23,10 @@ class Equipment {
     this.animations,
   );
 
-  factory Equipment.fromJson(Map<String, dynamic> json) {
+  factory Equipment.fromJson(String name, Map<String, dynamic> json) {
     return Equipment(
-      json['name'],
+      name,
+      json['modelName'],
       json['modelPath'],
       json['category'],
       json['function'],

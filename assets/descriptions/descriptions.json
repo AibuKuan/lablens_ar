@@ -1,0 +1,753 @@
+{
+    "Ambu Bag (Bag-Valve-Mask Resuscitator)": {
+        "modelPath": "assets/models/ambu-bag.glb",
+        "category": "Emergency & Resuscitation Equipment",
+        "specifications": "Manual resuscitator made of medical-grade silicone or PVC, includes a self-inflating bag, one-way valve, oxygen reservoir, and mask; adult and pediatric sizes available. Function: Used to provide positive pressure ventilation to patients who are not breathing or not breathing adequately.",
+        "usage": "Wear gloves; ensure proper assembly of bag, valve, and mask; position mask securely over patientâ€™s nose and mouth; squeeze bag steadily while observing chest rise. Safety and Maintenance Notes: Use with proper PPE (gloves, mask, eye protection); sterilize reusable components after use and follow manufacturer cleaning protocol; inspect for leaks or damage before each use.",
+        "maintenance": "Use with proper PPE (gloves, mask, eye protection); sterilize reusable components after use and follow manufacturer cleaning protocol; inspect for leaks or damage before each use.",
+        "warning": "Inadequate mask seal, over-ventilation causing gastric inflation, or improper cleaning leading to infection risk.",
+        "modelName": "ambu-bag"
+    },
+    "Asepto Syringe": {
+        "modelPath": "assets/models/asepto-syringe.glb",
+        "category": "Laboratory & Phlebotomy Supplies",
+        "specifications": "Medical-grade plastic; bulb-type barrel; 60 mL capacity; smooth plunger; total length approx. 18â€“20 cm.",
+        "function": "Used for wound irrigation, aspiration of fluids, and administration of medication in larger volumes.",
+        "usage": "Wear gloves; confirm sterility before use; draw solution into syringe; attach irrigation tip if needed; apply gentle pressure for controlled irrigation.",
+        "maintenance": "Use only sterile syringes; avoid excessive pressure during irrigation; dispose properly after single use.",
+        "warning": "Reuse of disposable syringes or using too much force, which can damage tissue.",
+        "modelName": "asepto-syringe"
+    },
+    "Bandage Scissor": {
+        "modelPath": "assets/models/bandage-scissor.glb",
+        "category": "Surgical & Medical Instruments",
+        "specification": "Stainless steel, blunt lower tip, 14cm.",
+        "function": "Cuts bandages and dressings without injuring skin.",
+        "usage": "Wear gloves; insert blunt tip under bandage; cut away from skin.",
+        "maintenance": "Sterilize after use; check blades.",
+        "warning": "Dull blades can injure; improper hand placement is unsafe.",
+        "modelName": "bandage-scissor"
+    },
+    "Basin Stainless": {
+        "modelPath": "assets/models/basin-stainless.glb",
+        "category": "Sanitation and Patient Care Equipment",
+        "specification": "Round, ~30cm diameter, corrosion-resistant, smooth edge.",
+        "function": "Holds fluids for patient hygiene, wound cleaning, or specimen collection.",
+        "usage": "Clean before use; fill as needed; empty and disinfect after.",
+        "maintenance": "Sanitize after patient contact; store dry.",
+        "warning": "Never reuse soiled basins; always check for damage.",
+        "modelName": "basin-stainless"
+    },
+    "Bed Screen": {
+        "modelPath": "assets/models/bed-screen.glb",
+        "category": "Hospital Furniture & Large Equipment",
+        "specification": "Metal frame, foldable, fabric panel, ~2m tall.",
+        "function": "Provides privacy around patient beds.",
+        "usage": "Position securely; fold or adjust as needed.",
+        "maintenance": "Clean regularly; inspect for damage.",
+        "warning": "Unstable screens can tip or fall; never block emergency access.",
+        "modelName": "bed-screen"
+    },
+    "Bedside Commode": {
+        "modelPath": "assets/models/bedside-commode.glb",
+        "category": "Patient Care & Nursing Supplies",
+        "specification": "Steel/plastic frame, removable bucket, seat height ~45cm.",
+        "function": "Allows patients with mobility issues to use a toilet seat at bedside.",
+        "usage": "Assist patient; securely position; empty and clean after use.",
+        "maintenance": "Disinfect all parts; check for damage.",
+        "warning": "Unstable commode increases fall risk; thorough cleaning prevents infection.",
+        "modelName": "bedside-commode"
+    },
+    "Blender": {
+        "modelPath": "assets/models/blender.glb",
+        "category": "Kitchen, Nutrition & Household Items (Hospital/Institutional Use)",
+        "specification": "Motor base, 1.5L jug, stainless blades.",
+        "function": "Blends foods for patients with swallowing difficulty.",
+        "usage": "Add ingredients; secure lid; blend; clean after use.",
+        "maintenance": "Wash all parts; inspect for wear.",
+        "warning": "Do not operate with lid off; avoid overfilling.",
+        "modelName": "blender"
+    },
+    "Blood Bag": {
+        "modelPath": "assets/models/blood-bag.glb",
+        "category": "Laboratory & Phlebotomy Supplies",
+        "specification": "Medical-grade plastic, 450mL volume.",
+        "function": "Collects, stores, and administers blood.",
+        "usage": "Aseptic technique for collection or transfusion; store as recommended.",
+        "maintenance": "Single-use; check expiration.",
+        "warning": "Never reuse; improper labeling and storage pose risks.",
+        "modelName": "blood-bag"
+    },
+    "Brain": {
+        "modelPath": "assets/models/brain.glb",
+        "category": "Anatomical Models & Teaching Aids",
+        "specification": "Plastic, life-size, labeled sections.",
+        "function": "Visualizes brain anatomy for teaching.",
+        "usage": "Handle gently; use for demonstration.",
+        "maintenance": "Dust gently; avoid moisture.",
+        "warning": "Dropping or rough handling breaks delicate sections.",
+        "modelName": "brain"
+    },
+    "Breast Pump": {
+        "modelPath": "assets/models/breast-pump.glb",
+        "category": "Patient Care & Nursing Supplies",
+        "specification": "Manual or electric, plastic/silicone shield, adjustable suction.",
+        "function": "Extracts breast milk.",
+        "usage": "Assemble and center shield; pump or activate motor; store milk safely.",
+        "maintenance": "Sterilize parts after use; keep dry.",
+        "warning": "Improper cleaning can lead to infection.",
+        "modelName": "breast-pump"
+    },
+    "Bucket Stainless Steel": {
+        "modelPath": "assets/models/bucket-stainless.glb",
+        "category": "Sanitation Equipment",
+        "specification": "Stainless, ~8â€“12L, handle, corrosion-resistant.",
+        "function": "Holds and transports water or cleaning solutions.",
+        "usage": "Fill as needed; carry with both hands.",
+        "maintenance": "Rinse and disinfect regularly.",
+        "warning": "Overfilling or rough handling causes spills.",
+        "modelName": "bucket-stainless"
+    },
+    "Cane": {
+        "modelPath": "assets/models/cane.glb",
+        "category": "Mobility & Assistive Devices",
+        "specification": "Wood, rubber tip.",
+        "function": "Supports walking and stability.",
+        "usage": "Adjust for patient; instruct correct hand side; monitor gait.",
+        "maintenance": "Check tip and shaft; clean as needed.",
+        "warning": "Incorrect height or worn tips may cause falls.",
+        "modelName": "cane"
+    },
+    "Catheter": {
+        "modelPath": "assets/models/catheter.glb",
+        "category": "Patient Care & Nursing Supplies",
+        "specification": "Sterile silicone/latex, sizes 12-24 French.",
+        "function": "Drains urine from bladder.",
+        "usage": "Lubricate and insert using aseptic technique; connect to bag.",
+        "maintenance": "Monitor and clean insertion site; change as per protocol.",
+        "warning": "Forcing insertion causes trauma; improper hygiene risks infection.",
+        "modelName": "catheter"
+    },
+    "Community Health Nursing Bag": {
+        "modelPath": "assets/models/chn-bag.glb",
+        "category": "Patient Care & Nursing Supplies",
+        "specification": "Waterproof fabric, multiple compartments, 40x30x15cm.",
+        "function": "Carries supplies for community health visits.",
+        "usage": "Organize essentials; disinfect exterior.",
+        "maintenance": "Regular cleaning; repair damage.",
+        "warning": "Overloaded or dirty bags may breed bacteria.",
+        "modelName": "chn-bag"
+    },
+    "Condom": {
+        "modelPath": "assets/models/condom.glb",
+        "category": "Patient Care & Nursing Supplies",
+        "specification": "Latex/polyurethane sheath, standard size, sterile pack.",
+        "function": "Prevents pregnancy and STIs.",
+        "usage": "Check expiry; apply to erect penis before intercourse; dispose after use.",
+        "maintenance": "Store cool/dry; use PPE for demonstrations.",
+        "warning": "Expired or damaged condoms break easily.",
+        "modelName": "condom"
+    },
+    "Cookware": {
+        "modelPath": "assets/models/cookware.glb",
+        "category": "Kitchen, Nutrition & Household Items (Hospital/Institutional Use)",
+        "specification": "Stainless/aluminum, various sizes.",
+        "function": "Prepares food and specialized diets.",
+        "usage": "Use clean cookware for preparation and serving.",
+        "maintenance": "Wash thoroughly; dry completely.",
+        "warning": "Dirty cookware causes foodborne illness.",
+        "modelName": "cookware"
+    },
+    "Digestive System": {
+        "modelPath": "assets/models/digestive-system.glb",
+        "category": "Anatomical Models & Teaching Aids",
+        "specification": "Plastic, life-size, detachable parts.",
+        "function": "Illustrates digestive anatomy.",
+        "usage": "Use model for lessons; interact with labeled parts.",
+        "maintenance": "Dust and store safely.",
+        "warning": "Rough handling may detach parts.",
+        "modelName": "digestive-system"
+    },
+    "Digital Microscope": {
+        "modelPath": "assets/models/digital-microscope.glb",
+        "category": "Diagnostic & Monitoring Equipment",
+        "specification": "Camera, optical lens, USB/wireless; 40x-1000x magnification.",
+        "function": "Enables detailed specimen examination.",
+        "usage": "Place slide; adjust focus; view on screen.",
+        "maintenance": "Clean lens with specialized paper; store covered.",
+        "warning": "Dirty slides obscure specimens; rough handling damages optics.",
+        "modelName": "digital-microscope"
+    },
+    "Drinking Glass": {
+        "modelPath": "assets/models/drinking-glass.glb",
+        "category": "Kitchen, Nutrition & Household Items (Hospital/Institutional Use)",
+        "specification": "Glass or plastic, ~200-300mL, smooth rim.",
+        "function": "Holds fluids for drinking.",
+        "usage": "Serve clean glass to patient; fill as required.",
+        "maintenance": "Wash and dry thoroughly.",
+        "warning": "Cracked glasses are unsafe and must be discarded.",
+        "modelName": "drinking-glass"
+    },
+    "Ear Teaching Model": {
+        "modelPath": "assets/models/ear.glb",
+        "category": "Anatomical Models & Teaching Aids",
+        "specification": "Enlarged plastic model; labeled anatomy.",
+        "function": "Demonstrates ear structure and pathology.",
+        "usage": "Use for study and demonstration.",
+        "maintenance": "Clean gently; store in dry place.",
+        "warning": "Rough handling breaks delicate sections.",
+        "modelName": "ear"
+    },
+    "Eye": {
+        "modelPath": "assets/models/eye.glb",
+        "category": "Anatomical Models & Teaching Aids",
+        "specification": "Enlarged plastic model; detachable lens, cornea, etc.",
+        "function": "Visualizes human eye anatomy.",
+        "usage": "Use for study and demonstration.",
+        "maintenance": "Clean gently; store securely.",
+        "warning": "Avoid moisture and impacts.",
+        "modelName": "eye"
+    },
+    "Facemask": {
+        "modelPath": "assets/models/facemask.glb",
+        "category": "Patient Care & Nursing Supplies",
+        "specification": "Medical or surgical mask, disposable, ear loops, multi-layer fabric.",
+        "function": "Protects against inhaling airborne pathogens and droplets.",
+        "usage": "Cover nose and mouth; secure straps; replace if wet or soiled.",
+        "maintenance": "Dispose after single use; store clean masks in a dry area.",
+        "warning": "Do not reuse disposable masks; improper fit reduces effectiveness.",
+        "modelName": "facemask"
+    },
+    "Feeding Bottle": {
+        "modelPath": "assets/models/feeding-bottle.glb",
+        "category": "Patient Care & Nursing Supplies",
+        "specification": "Plastic or glass, 120â€“250 mL, silicone nipple, clear measuring marks.",
+        "function": "Feeds infants using formula or expressed milk.",
+        "usage": "Sterilize parts; fill with appropriate fluid; cap and shake; feed infant, holding bottle at an angle.",
+        "maintenance": "Clean and sterilize after every use; inspect nipple for damage.",
+        "warning": "Never reuse bottles without sterilizing; damaged nipples may cause choking.",
+        "modelName": "feeding-bottle"
+    },
+    "Flashlight": {
+        "modelPath": "assets/models/flashlight.glb",
+        "category": "Diagnostic & Monitoring Equipment",
+        "specification": "Portable battery-powered LED, plastic or metal, 12-15 cm.",
+        "function": "Provides focused light for examinations.",
+        "usage": "Check battery; direct light as needed in assessment (pupils, wounds).",
+        "maintenance": "Clean exterior; replace batteries when dim.",
+        "warning": "Avoid long exposure to eyes; do not immerse in water.",
+        "modelName": "flashlight"
+    },
+    "Food Tray": {
+        "modelPath": "assets/models/food-tray.glb",
+        "category": "Patient Care & Nursing Supplies",
+        "specification": "Stainless steel tray, ~40x30cm, raised edge.",
+        "function": "Transports or serves food safely.",
+        "usage": "Wipe clean before and after use; lay food or utensils securely on tray.",
+        "maintenance": "Sanitize after each use; check for dents or sharp edges.",
+        "warning": "Always keep tray level to avoid food spills.",
+        "modelName": "food-tray"
+    },
+    "Footstool": {
+        "modelPath": "assets/models/footstool.glb",
+        "category": "Hospital Furniture & Large Equipment",
+        "specification": "Sturdy plastic and metal, non-slip surface, 20â€“30cm height.",
+        "function": "Assists patients or staff to reach elevated areas safely.",
+        "usage": "Place on flat surface; check stability before use.",
+        "maintenance": "Inspect regularly for cracks; clean as needed.",
+        "warning": "Do not use damaged or unstable stools; avoid wet surfaces.",
+        "modelName": "footstool"
+    },
+    "Forceps": {
+        "modelPath": "assets/models/forceps.glb",
+        "category": "Surgical & Medical Instruments",
+        "specification": "Stainless steel; straight or curved, locking or non-locking jaws.",
+        "function": "Grips or manipulates tissues and materials during procedures.",
+        "usage": "Sterilize before use; grip only as needed with appropriate force.",
+        "maintenance": "Clean and autoclave after every use; check alignment.",
+        "warning": "Improper grip causes injury; never use damaged forceps.",
+        "modelName": "forceps"
+    },
+    "Glucometer": {
+        "modelPath": "assets/models/glucometer.glb",
+        "category": "Diagnostic & Monitoring Equipment",
+        "specification": "Handheld digital device, LCD display, uses disposable strips.",
+        "function": "Analyzes blood glucose levels.",
+        "usage": "Insert strip; apply blood drop; read result on display.",
+        "maintenance": "Clean device with alcohol wipe after use.",
+        "warning": "Use fresh strips; improper strip use gives false readings.",
+        "modelName": "glucometer"
+    },
+    "Goose Lamp": {
+        "modelPath": "assets/models/gooseneck-lamp.glb",
+        "category": "Hospital Furniture & Large Equipment",
+        "specification": "Chrome-plated or anodized aluminum gooseneck (12â€“16\" long, 360Â° adjustable); height adjustable from 48\" to 74\"; weighted steel base (11\" diameter); uses 60W incandescent or 13W CFL / 12W LED equivalent; 7â€“8 ft grounded 3-prong cord; UL listed; cool-shade design.",
+        "function": "Provides bright, focused, and adjustable illumination for medical examinations and minor procedures.",
+        "usage": "Use in hospitals, clinics, exam rooms, and veterinary settings for patient assessment and diagnostics.",
+        "maintenance": "Clean with mild disinfectant; avoid abrasive materials; inspect cord and plug regularly.",
+        "warning": "Do not exceed recommended bulb wattage; avoid bending gooseneck excessively; ensure base is stable to prevent tipping.",
+        "modelName": "gooseneck-lamp"
+    },
+    "Hospital Bed": {
+        "modelPath": "assets/models/hospital-bed.glb",
+        "category": "Hospital Furniture & Large Equipment",
+        "specification": "Metal or plastic frame; adjustable height and head/foot sections, lockable wheels.",
+        "function": "Provides flexible, safe resting surface for patients.",
+        "usage": "Adjust positions as needed; lock wheels; raise/lower rails for safety.",
+        "maintenance": "Clean regularly; check wheel and mechanism function.",
+        "warning": "Unlocked wheels and rails can lead to falls.",
+        "modelName": "hospital-bed"
+    },
+    "Human Heart": {
+        "modelPath": "assets/models/human-heart.glb",
+        "category": "Anatomical Models & Teaching Aids",
+        "specification": "Life-size, detachable parts, labeled chambers.",
+        "function": "Shows external heart anatomy for study.",
+        "usage": "Handle model gently; use for demonstrations.",
+        "maintenance": "Dust and store in a protected environment.",
+        "warning": "Do not expose to moisture or drop the model.",
+        "modelName": "human-heart"
+    },
+    "Human Skull": {
+        "modelPath": "assets/models/human-skull.glb",
+        "category": "Anatomical Models & Teaching Aids",
+        "specification": "Plastic, life-size, removable sections.",
+        "function": "Shows anatomy of the human skull.",
+        "usage": "Use for cranial study; open sections gently.",
+        "maintenance": "Clean regularly; avoid drops.",
+        "warning": "Dropping cracks or breaks sections.",
+        "modelName": "human-skull"
+    },
+    "Insulin": {
+        "modelPath": "assets/models/insulin.glb",
+        "category": "Patient Care & Nursing Supplies",
+        "specification": "Injectable solution in vial or pen; various concentrations.",
+        "function": "Lowers blood sugar levels in diabetic patients.",
+        "usage": "Use sterile syringe; measure dose; inject into subcutaneous tissue as directed.",
+        "maintenance": "Store refrigerated; monitor expiration date.",
+        "warning": "Expired insulin or incorrect dosing can be harmful.",
+        "modelName": "insulin"
+    },
+    "IV Pumps": {
+        "modelPath": "assets/models/iv-pump.glb",
+        "category": "Emergency & Resuscitation Equipment",
+        "specification": "Electronic, programmable, motor-driven, flow-rate control.",
+        "function": "Delivers precise IV fluids/medications at set rates.",
+        "usage": "Set up IV set; program pump; monitor alarms.",
+        "maintenance": "Disinfect exterior; check battery and calibration.",
+        "warning": "Incorrect settings or blocked tubing interrupts therapy.",
+        "modelName": "iv-pump"
+    },
+    "Kidney Basin Plastic": {
+        "modelPath": "assets/models/kidney-basin-plastic.glb",
+        "category": "Sanitation Equipment",
+        "specification": "Plastic, kidney-shaped, ~24x12x5cm.",
+        "function": "Used same as stainless but lightweight.",
+        "usage": "Clean and inspect for cracks; use with gloves.",
+        "maintenance": "Disinfect after patient use.",
+        "warning": "Discard cracked basins immediately.",
+        "modelName": "kidney-basin-plastic"
+    },
+    "Kidney Basin Stainless": {
+        "modelPath": "assets/models/kidney-basin-stainless.glb",
+        "category": "Sanitation Equipment",
+        "specification": "Stainless steel, kidney-shaped, ~24x12x5cm.",
+        "function": "Collects fluids or holds small instruments during care.",
+        "usage": "Clean before use; position at patientâ€™s side as needed.",
+        "maintenance": "Disinfect thoroughly after each use.",
+        "warning": "Reusing unclean basins risks infection.",
+        "modelName": "kidney-basin-stainless"
+    },
+    "Kidney": {
+        "modelPath": "assets/models/kidney.glb",
+        "category": "Anatomical Models & Teaching Aids",
+        "specification": "Life-size, labeled, detachable demonstration parts.",
+        "function": "Displays kidney structure and nephron layout.",
+        "usage": "Use for demonstration; store away from direct sunlight.",
+        "maintenance": "Dust routinely; avoid drops.",
+        "warning": "Dropping the model may result in damage.",
+        "modelName": "kidney"
+    },
+    "Kitchen Dish Cabinet": {
+        "modelPath": "assets/models/kitchen-cabinet.glb",
+        "category": "Kitchen, Nutrition & Household Items (Hospital/Institutional Use)",
+        "specification": "Shelved cabinet, wood/steel, height ~170cm.",
+        "function": "Stores clean dishes for food service.",
+        "usage": "Keep closed except when retrieving/storing items.",
+        "maintenance": "Clean shelves regularly; fix loose doors.",
+        "warning": "Never store dirty dishes; overloading may break shelves.",
+        "modelName": "kitchen-cabinet"
+    },
+    "Manual Adult Scale": {
+        "modelPath": "assets/models/manual-adult-scale.glb",
+        "category": "Measuring & Weighing Devices",
+        "specification": "Mechanical/analog with dial or balance beam; up to 200kg.",
+        "function": "Measures adult patient weight.",
+        "usage": "Zero scale; ask patient to step up; record weight.",
+        "maintenance": "Clean after use; check calibration.",
+        "warning": "Place on level surface for accuracy; assist unsteady patients.",
+        "modelName": "manual-adult-scale"
+    },
+    "Mayo Scissor": {
+        "modelPath": "assets/models/mayo-scissor.glb",
+        "category": "Surgical & Medical Instruments",
+        "specification": "Stainless, ~15cm, straight/curved tips.",
+        "function": "Cuts tissues or surgical dressings.",
+        "usage": "Sterilize before and after use; use with proper grip.",
+        "maintenance": "Check sharpness; avoid corrosion.",
+        "warning": "Do not use dull or unclean scissors.",
+        "modelName": "mayo-scissor"
+    },
+    "Measuring Cup Plastic": {
+        "modelPath": "assets/models/measuring-cup.glb",
+        "category": "Preparation Equipment",
+        "specification": "Plastic, transparent, marked increments, 250â€“1000mL.",
+        "function": "Measures and pours accurate fluid quantities.",
+        "usage": "Fill liquid to mark at eye level; pour carefully.",
+        "maintenance": "Wash and dry after every use.",
+        "warning": "Improper measurement may affect medication dosing.",
+        "modelName": "measuring-cup"
+    },
+    "Measuring Spoon": {
+        "modelPath": "assets/models/measuring-spoon.glb",
+        "category": "Measuring & Weighing Devices",
+        "specification": "Plastic/metal set; marked 1â€“15mL.",
+        "function": "Accurately measures medication or cooking ingredients.",
+        "usage": "Use correct spoon by reading mark; level with spatula.",
+        "maintenance": "Wash between uses.",
+        "warning": "Residual substances cause dosing error.",
+        "modelName": "measuring-spoon"
+    },
+    "Medicine Tray": {
+        "modelPath": "assets/models/medicine-tray.glb",
+        "category": "Patient Care & Nursing Supplies",
+        "specification": "Plastic/stainless, ~30x20cm, flat.",
+        "function": "Carries and organizes medications during rounds.",
+        "usage": "Arrange meds by time/dose; avoid mixing.",
+        "maintenance": "Disinfect after every use.",
+        "warning": "Misplaced meds or dirty tray cause medication errors.",
+        "modelName": "medicine-tray"
+    },
+    "Microscope Slide With Case": {
+        "modelPath": "assets/models/microscope-slide-with-case.glb",
+        "category": "Lab Equipment",
+        "specification": "Glass slides (76x26mm), plastic case for 25â€“50 slides.",
+        "function": "Holds and protects specimens for microscopy.",
+        "usage": "Place specimens; cover slip if needed; label slides.",
+        "maintenance": "Handle with gloves; store clean and dry.",
+        "warning": "Direct skin contact leads to smudges or breakage.",
+        "modelName": "microscope-slide-with-case"
+    },
+    "Microscope": {
+        "modelPath": "assets/models/microscope.glb",
+        "category": "Diagnostic & Monitoring Equipment",
+        "specification": "Optical; 40xâ€“1000x, glass lenses, mechanical stage.",
+        "function": "Magnifies specimens for laboratory examination.",
+        "usage": "Prepare slide; adjust focus and illumination.",
+        "maintenance": "Clean lenses; keep covered when not in use.",
+        "warning": "Handle slides and optics gently to avoid damage.",
+        "modelName": "microscope"
+    },
+    "Microscope Slide": {
+        "modelPath": "assets/models/miscroscope-slide.glb",
+        "category": "Diagnostic & Monitoring Equipment",
+        "specifications": "Rectangular glass plate (~75 x 25 mm, 1 mm thick) with a smooth, transparent surface.",
+        "function": "Used to hold and prepare specimens for examination under a microscope.",
+        "usage": "Wear gloves; use forceps to handle slides; place a drop of sample on the slide, cover with a cover slip, then place on the microscope stage.",
+        "maintenance": "Handle by the edges; dispose of broken slides in a sharps container; clean for reuse according to lab guidelines.",
+        "warning": "Touching the flat surface, causing contamination or breakage.",
+        "modelName": "miscroscope-slide"
+    },
+    "Mixing Bowl": {
+        "modelPath": "assets/models/mixing-bowl.glb",
+        "category": "Containers, Basins & Storage",
+        "specification": "Stainless, 1â€“2L, deep round.",
+        "function": "Used to mix ingredients for food or medications.",
+        "usage": "Add materials; mix thoroughly; wash out after.",
+        "maintenance": "Rinse and dry after every use.",
+        "warning": "Do not use for incompatible substances.",
+        "modelName": "mixing-bowl"
+    },
+    "High-Flow Nasal Cannula": {
+        "modelPath": "assets/models/nasal-cannula.glb",
+        "category": "Emergency & Resuscitation Equipment",
+        "specification": "Soft silicone nasal prongs, oxygen tubing, adjustable flow meter.",
+        "function": "Delivers humidified, high-flow oxygen therapy.",
+        "usage": "Connect to oxygen; fit on patient; set flow as prescribed.",
+        "maintenance": "Single-patient use or sterilize as appropriate; check prongs for cracks.",
+        "warning": "High flows may cause nasal dryness; improper fit reduces therapy efficacy.",
+        "modelName": "nasal-cannula"
+    },
+    "Hospital Operating Light": {
+        "modelPath": "assets/models/operating-light.glb",
+        "category": "Hospital Furniture & Large Equipment",
+        "specification": "LED array, adjustable arm, shadow-free illumination.",
+        "function": "Provides bright directional light for surgeries.",
+        "usage": "Position for best coverage; adjust intensity as needed.",
+        "maintenance": "Wipe down regularly; check function of bulbs.",
+        "warning": "Incorrect lamp position impairs visibility; never clean when plugged in.",
+        "modelName": "operating-light"
+    },
+    "Operating Table": {
+        "modelPath": "assets/models/operating-table.glb",
+        "category": "Hospital Furniture & Large Equipment",
+        "specification": "Steel frame, padded surface, adjustable tilt/height, lockable wheels.",
+        "function": "Supports and positions patients securely for surgical procedures, offering stability with fixed legs and precise manual adjustments.",
+        "usage": " Manually adjust height and sections to fit surgical needs; ensure feet adjustments are secure for maximum stability; position patient safely on padded surface..",
+        "maintenance": "Sanitize all surfaces after each use; inspect mechanical joints and manual adjustment mechanisms regularly.",
+        "warning": "Improper adjustment are risk in injury may compromise surgical access or patient safety, ensure it is correctly aligned before surgery to avoid patient or staff inconvenience..",
+        "modelName": "operating-table"
+    },
+    "Otoscope": {
+        "modelPath": "assets/models/otoscope.glb",
+        "category": "Diagnostic & Monitoring Equipment",
+        "specification": "Handheld device with built-in LED light source; lightweight plastic or metal casing; interchangeable specula (3â€“8 mm diameter); 3X magnification lens; some models include an insufflation port for pneumatic testing.",
+        "function": "Used to visually examine the ear canal and tympanic membrane (eardrum) for diagnosis of ear conditions.",
+        "usage": "Attach a clean speculum appropriate to patient size; gently insert the speculum into the ear canal without forcing; illuminate and observe ear structures through the magnifier; conduct pneumatic testing if equipped.",
+        "maintenance": "Disinfect the otoscope and reusable specula after each use; replace bulbs and specula as needed; store in a dry, clean environment; perform regular functional checks..",
+        "warning": "Inserting the speculum too deeply or forcefully may cause injury or discomfort; ensure proper size and gentle handling to avoid trauma..",
+        "modelName": "otoscope"
+    },
+    "Oxygen Regulator": {
+        "modelPath": "assets/models/oxygen-regulator.glb",
+        "category": "Emergency & Resuscitation Equipment",
+        "specification": "Pressure gauge, adjustable flow meter, equipped with a durable neoprene diaphragm and sintered filter for safety; standard DISS or CGA connections for oxygen tanks.",
+        "function": "Controls and regulates the flow and pressure of oxygen delivered from a tank to the patient, ensuring safe and precise oxygen therapy.",
+        "usage": "Attach securely to oxygen tank valve; adjust the flow rate using the flow meter to the prescribed level; continuously monitor pressure gauges and patient status.",
+        "maintenance": "Regularly inspect for leaks and damage; clean pressure gauge and regulator body; replace filters and diaphragms as recommended; verify connections are secure before each use.",
+        "warning": "Incorrect assembly or improper flow setting can cause oxygen delivery hazards; ensure correct attachment and monitor flow; avoid oil or grease contamination on regulator components.",
+        "modelName": "oxygen-regulator"
+    },
+    "Pelvic Model": {
+        "modelPath": "assets/models/pelvic.glb",
+        "category": "Anatomical Models & Teaching Aids",
+        "specification": "Life-sized plastic model with labeled and detachable sections depicting pelvic bones, ligaments, vessels, nerves, and reproductive organs; designed to provide 3D spatial understanding.",
+        "function": "Facilitates teaching and understanding of pelvic anatomy including bones, muscles, and internal organs; supports hands-on learning and demonstration of anatomical relationships.",
+        "usage": "Use detachable parts to demonstrate anatomical structures and their relations; engage students in assembling and disassembling for improved spatial comprehension; store safely to avoid deformation.",
+        "maintenance": "Clean gently with a soft cloth; avoid exposure to strong impacts or direct sunlight; store in protective cases to preserve integrity.",
+        "warning": "Handle with care to prevent cracking or damage; excessive force or dropping may compromise model components; keep away from solvents or harsh chemicals.",
+        "modelName": "pelvic"
+    },
+    "Penlight": {
+        "modelPath": "assets/models/penlight.glb",
+        "category": "Diagnostic & Monitoring Equipment",
+        "specification": "Slim, battery-powered LED penlight approximately 13 cm long; lightweight metal or plastic body; high CRI LED for accurate tissue color rendering; powered typically by 1 or 2 AAA batteries.",
+        "function": "Illuminates eyes, throat, wounds, and other body parts for clinical examination and diagnostic assessment.",
+        "usage": "Briefly shine the light on the area under examination; avoid prolonged exposure to patientâ€™s eyes; turn off after use; keep lens clean for clear illumination.",
+        "maintenance": "Replace batteries as needed; clean the exterior and lens regularly with a soft, damp cloth; check the bulb/LED functionality periodically.",
+        "warning": "Prolonged direct exposure to the eyes may cause discomfort or temporary visual disturbance; handle carefully to avoid dropping which can damage internal components.",
+        "modelName": "penlight"
+    },
+    "Pulse Oximeter": {
+        "modelPath": "assets/models/pulse-oximeter.glb",
+        "category": "Emergency & Resuscitation Equipment",
+        "specification": "Finger sensor using red and infrared LEDs; digital LED display showing oxygen saturation (SpO2) and pulse rate; battery powered; lightweight and portable.",
+        "function": "Measures arterial oxygen saturation and pulse rate by analyzing light absorption through the skin, typically on the fingertip, without entering the body.",
+        "usage": "Place sensor clip securely on the patient's finger ensuring good contact; wait for display stabilization; record readings; remove and turn off after use.",
+        "maintenance": "Clean and disinfect sensor and device after each use; check and replace batteries as necessary; inspect sensor for damage regularly.",
+        "warning": "Poor sensor contact, cold extremities, or excessive movement can lead to inaccurate readings; always verify with clinical assessment.",
+        "modelName": "pulse-oximeter"
+    },
+    "Simple Mask": {
+        "modelPath": "assets/models/simple-mask.glb",
+        "category": "Emergency & Resuscitation Equipment",
+        "specifications": "Molded soft plastic clear mask; adjustable elastic strap; oxygen inlet; fits most adults and older children.",
+        "function": "Delivers moderate concentrations of oxygen to spontaneously breathing patients.",
+        "usage": "Wash hands; place mask over patient's nose and mouth; secure with strap; connect oxygen tubing; adjust flow rate as ordered.",
+        "maintenance": "Use a clean mask for each patient; monitor for skin irritation; check fit to prevent oxygen leaks.",
+        "warning": "Reusing disposable masks, using the wrong flow rate, or leaving the mask too loose, decreasing effectiveness.",
+        "modelName": "simple-mask"
+    },
+    "Skeletal System": {
+        "modelPath": "assets/models/skeletal-system.glb",
+        "category": "Anatomical Models & Teaching Aids",
+        "specification": "Life-size plastic model with labeled bones and movable joints to demonstrate articulation.",
+        "function": "Provides a detailed representation of human bone structure useful for study and teaching purposes.",
+        "usage": "Use as a hands-on tool for anatomical learning; manipulate joints gently to observe movement; handle carefully to avoid damage.",
+        "maintenance": "Dust gently with a soft cloth; store upright in a safe place to prevent distortion.",
+        "warning": "Avoid rough handling or dropping, as this could break or crack delicate connections.",
+        "modelName": "skeletal-system"
+    },
+    "Sphygmomanometer": {
+        "modelPath": "assets/models/sphygmomanometer.glb",
+        "category": "Diagnostic & Monitoring Equipment",
+        "specification": "Available as manual or electronic; includes an inflatable cuff, pressure gauge or digital display; designed to measure blood pressure in mmHg.",
+        "function": "Used to measure systolic and diastolic blood pressure by occluding and then releasing blood flow in the brachial artery.",
+        "usage": "Wrap the cuff snugly around the upper arm at heart level; inflate cuff above expected systolic pressure; gradually release air while listening or observing gauge; record systolic and diastolic readings.",
+        "maintenance": "Keep cuff clean and dry; regularly calibrate device to ensure accuracy; check for leaks or damaged parts and replace as necessary.",
+        "warning": "Using a cuff that is too small or incorrectly placed can result in inaccurate readings; follow proper technique to ensure reliable measurements.",
+        "modelName": "sphygmomanometer"
+    },
+    "Stethoscope": {
+        "modelPath": "assets/models/stethoscope.glb",
+        "category": "Diagnostic & Monitoring Equipment",
+        "specification": "Flexible tubing connecting stainless steel chestpiece (with diaphragm and bell) to soft ear tips; includes metal stem linking chestpiece and tubing; designed for clear sound transmission.",
+        "function": "Amplifies internal body sounds such as heartbeats, lung sounds, and bowel movements for diagnostic assessment.",
+        "usage": "Place the chestpiece directly on patientâ€™s skin; use diaphragm side for high-pitched sounds and bell side for low-pitched sounds; listen carefully through earpieces.",
+        "maintenance": "Clean ear tips, tubing, and chestpiece regularly using alcohol wipes; inspect for damage or wear; replace parts as needed to maintain sound quality.",
+        "warning": "Using a dirty or damaged stethoscope can spread infection and reduce acoustic clarity.",
+        "animations": {
+            "Bell": {
+                "animationName": "bellModel",
+                "description": "The bell is a small, cylindrical device that vibrates when the chestpiece is placed on the patientâ€™s skin. It is used to amplify the low-frequency sounds of the chestpiece, such as heartbeats, lung sounds, and bowel movements."
+            },
+            "Ear Tips": {
+                "animationName": "eartipsModel",
+                "description": "Ear tips are soft rubber or silicone pieces attached to the ends of the ear tubes. They have a small opening for sound and must be both soft and firm enough to seal the ear canal and block external noise."
+            },
+            "Tubing": {
+                "animationName": "tubingModel",
+                "description": "The tubing is a flexible, rubber tube that connects the chestpiece to the ear tubes. It is flexible enough to bend and stretch, but not so tight that it can cause discomfort or damage to the ears."
+            }
+        },
+        "modelName": "stethoscope"
+    },
+    "Stomach": {
+        "modelPath": "assets/models/stomach.glb",
+        "category": "Anatomical Models & Teaching Aids",
+        "specification": "Plastic, life-size, with detachable front half for detailed cross-sectional study of stomach layers, vessels, nerves, and mucosa.",
+        "function": "Displays the anatomical structure and function of the stomach, including its role in digestion and nutrient processing.",
+        "usage": "Handle carefully during demonstrations; use detachable parts to explore internal anatomy; ideal for teaching and self-learning.",
+        "maintenance": "Store in dry place; clean gently; avoid dropping or rough handling to prevent damage.",
+        "warning": "Excessive force or dropping may crack or damage anatomical sections.",
+        "modelName": "stomach"
+    },
+    "Storage Container": {
+        "modelPath": "assets/models/storage-container.glb",
+        "category": "Containers, Basins & Storage",
+        "specification": "Plastic container, translucent with airtight lid; available in sizes ranging from 1 to 10 liters; durable and lightweight.",
+        "function": "Safely stores medical equipment, supplies, and materials to protect them from contamination and damage.",
+        "usage": "Label contents clearly; close lid securely; store containers in designated storage areas to maintain order and accessibility.",
+        "maintenance": "Wash inside and outside surfaces regularly with mild detergent; dry thoroughly before reuse to prevent mold and contamination.",
+        "warning": "Using unlabeled containers can cause confusion; cracked or damaged containers may leak or lead to contamination of contents.",
+        "modelName": "storage-container"
+    },
+    "Stretcher ER": {
+        "modelPath": "assets/models/stretcher-er.glb",
+        "category": "Emergency & Resuscitation Equipment",
+        "specification": "Metal frame, mattress, safety straps, designed for manual carrying.",
+        "function": "Used to manually transport patients in emergency situations, providing stable support during lifting and carrying.",
+        "usage": "Secure patient; fasten safety straps; avoid dragging or sliding.",
+        "maintenance": "Clean mattress/straps after every use.",
+        "warning": "Unlocking during use poses risk; improper restraint increases falls.",
+        "modelName": "stretcher-er"
+    },
+    "Surgical Gloves": {
+        "modelPath": "assets/models/surgical-gloves.glb",
+        "category": "Surgical & Medical Instruments",
+        "specification": "Sterile latex/nitrile, powder-free, various sizes.",
+        "function": "Protects from contamination during procedures.",
+        "usage": "Wear single-use gloves after handwash; remove and dispose safely.",
+        "maintenance": "Store unopened in a dry place; dispose after one use.",
+        "warning": "Never reuse; avoid using torn or punctured gloves.",
+        "modelName": "surgical-gloves"
+    },
+    "Tongue Depressor": {
+        "modelPath": "assets/models/tongue-depressor.glb",
+        "category": "Surgical & Medical Instruments",
+        "specification": "Flat wooden/plastic stick, ~15cm.",
+        "function": "Holds tongue down for mouth/throat exams.",
+        "usage": "Depress gently; discard after single use.",
+        "maintenance": "Keep in dry storage; dispose properly.",
+        "warning": "Never reuse; rough handling can cause gag reflex.",
+        "modelName": "tongue-depressor"
+    },
+    "Trolley": {
+        "modelPath": "assets/models/trolley.glb",
+        "category": "Hospital Furniture & Large Equipment",
+        "specification": "Stainless steel, multiple trays, lockable wheels.",
+        "function": "Organizes and transports surgical instruments.",
+        "usage": "Arrange sterilized instruments; lock wheels when stationary.",
+        "maintenance": "Disinfect trays and handles regularly.",
+        "warning": "Overloaded or dirty trolleys can lead to contamination and accidents.",
+        "modelName": "trolley"
+    },
+    "Tuning Fork": {
+        "modelPath": "assets/models/tuning-forks.glb",
+        "category": "Diagnostic & Monitoring Equipment",
+        "specification": "Made of steel or aluminum; standard frequency of 512 Hz; approximately 10 cm in length.",
+        "function": "Tests vibratory sensation and hearing.",
+        "usage": "Strike fork; place on bone or ear; observe patient response.",
+        "maintenance": "Clean regularly with alcohol wipes; inspect for rust, bends or damage; store safely to prevent distortion.",
+        "warning": "A weak strike or dirty fork impairs testing.",
+        "modelName": "tuning-forks"
+    },
+    "Vacuum Blood Tube": {
+        "modelPath": "assets/models/vacuum-blood-tube.glb",
+        "category": "Laboratory & Phlebotomy Supplies",
+        "specification": "Plastic/glass, vacuum, 2â€“10mL, color-coded.",
+        "function": "Collects blood for laboratory testing.",
+        "usage": "Insert needle, collect blood until filled.",
+        "maintenance": "Handle with gloves; dispose in sharps container.",
+        "warning": "Wrong tube/color for test yields errors; avoid air bubbles.",
+        "modelName": "vacuum-blood-tube"
+    },
+    "Walker": {
+        "modelPath": "assets/models/walker.glb",
+        "category": "Mobility & Assistive Devices",
+        "specification": "Aluminum frame, four legs, rubber tips, adjustable height.",
+        "function": "Assists patient with walking and stability.",
+        "usage": "Adjust for patient height; instruct proper use.",
+        "maintenance": "Replace tips as needed; clean regularly.",
+        "warning": "Unstable walker or worn tips can cause patient falls.",
+        "modelName": "walker"
+    },
+    "Weighing Scale": {
+        "modelPath": "assets/models/weighing-scale.glb",
+        "category": "Measuring & Weighing Devices",
+        "specification": "Mechanical or digital, platform, capacity 200kg.",
+        "function": "Measures patient weight.",
+        "usage": "Zero scale; patient steps on; read weight.",
+        "maintenance": "Clean platform; check calibration.",
+        "warning": "Uneven surface or misuse leads to inaccurate readings.",
+        "modelName": "weighing-scale"
+    },
+    "Wheelchair": {
+        "modelPath": "assets/models/wheelchair.glb",
+        "category": "Mobility & Assistive Devices",
+        "specification": "Steel/aluminum, locking wheels, cushioned seat, leg/foot rests.",
+        "function": "Helps transport patients with mobility impairment.",
+        "usage": "Lock brakes; assist patient transferring; secure footrests.",
+        "maintenance": "Clean regularly; check wheels/locks.",
+        "warning": "Unlocked wheels and improper transfer risks injury.",
+        "animations": {
+            "Armrest": {
+                "animationName": "armrest",
+                "description": "A padded or solid support located on both sides of the wheelchair that allows the user to rest their arms comfortably and helps with balance and transfers."
+            },
+            "Backrest": {
+                "animationName": "backrest",
+                "description": "The vertical support behind the user’s back that provides posture support and comfort while sitting in the wheelchair."
+            },
+            "Brake": {
+                "animationName": "brake",
+                "description": "A locking mechanism attached to the wheels that prevents the wheelchair from moving when parked, ensuring safety during transfers or while stationary."
+            },
+            "Castor": {
+                "animationName": "castrol",
+                "description": "The small front wheel that swivels freely, allowing the wheelchair to turn and maneuver easily in different directions."
+            },
+            "Frame": {
+                "animationName": "frame",
+                "description": "The main structural body of the wheelchair that holds all components together and supports the user’s weight. It is typically made from steel, aluminum, or other lightweight materials."
+            },
+            "Push Handle": {
+                "animationName": "push-handle",
+                "description": "Handles located at the back of the wheelchair that allow a caregiver or assistant to push and control the wheelchair."
+            },
+            "Push Ring": {
+                "animationName": "pushring",
+                "description": "A circular ring attached to the outside of the rear wheels that the user grips to move, steer, and stop the wheelchair manually."
+            },
+            "Seat": {
+                "animationName": "seat",
+                "description": "The surface on which the user sits, usually made of fabric or cushioning material designed for comfort and weight support."
+            },
+            "Wheel": {
+                "animationName": "wheel",
+                "description": "The large rear wheel that provides primary movement and stability. It is connected to the push ring and allows the user or caregiver to propel the wheelchair."
+            }
+        },
+        "modelName": "wheelchair"
+    }
+}

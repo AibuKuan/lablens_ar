@@ -34,6 +34,9 @@ class _ModelScalerState extends State<ModelScaler> {
     setState(() {
       _currentValue = newValue.clamp(widget.min, widget.max);
     });
+  }
+
+  void _resizeModel(double newScale) {
     widget.onChanged(_currentValue);
   }
 
@@ -80,6 +83,7 @@ class _ModelScalerState extends State<ModelScaler> {
                 ),
                 child: Slider(
                   onChanged: _updateValue,
+                  onChangeEnd: _resizeModel,
                   value: _currentValue,
                   min: widget.min,
                   max: widget.max,

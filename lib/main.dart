@@ -1,10 +1,16 @@
 import 'package:ar_app/screens/home_screen.dart';
 import 'package:ar_app/screens/library_screen.dart';
+import 'package:ar_app/services/description.dart';
 import 'package:flutter/material.dart';
 
 import 'screens/scanner_screen.dart';
 
-void main() => runApp(const MyApp());
+// void main() => runApp(const MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await EquipmentManager().loadEquipments();
+  runApp(const MyApp());
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

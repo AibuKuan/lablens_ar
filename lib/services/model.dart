@@ -1,15 +1,15 @@
-import 'dart:convert';
 import 'package:ar_app/models/equipment.dart';
+import 'package:ar_app/services/description.dart';
 import 'package:ar_app/utils/asset.dart';
 import 'package:ar_flutter_plugin_2/datatypes/node_types.dart';
 import 'package:ar_flutter_plugin_2/managers/ar_object_manager.dart';
 import 'package:ar_flutter_plugin_2/models/ar_anchor.dart';
 import 'package:ar_flutter_plugin_2/models/ar_node.dart';
-import 'package:flutter/services.dart' show rootBundle;
 import 'package:vector_math/vector_math_64.dart' as vector;
 
 
 class Model {
+  late String modelName;
   String modelPath = "assets/models/";
   String descPath = "assets/descriptions/";
 
@@ -31,7 +31,7 @@ class Model {
 
     final model = Model._internal(name ?? "model", detail);
     if (detail == null) {
-      await model._loadDescription();
+      model._loadDescription();
     } else {
       detail = detail;
     }
@@ -41,33 +41,21 @@ class Model {
   
   Model._internal(String name, Equipment? detail) {
     if (detail != null) {
+      modelName = detail.modelName;
       modelPath = detail.modelPath;
       this.detail = detail;
     } else {
+      modelName = name;
       modelPath += "$name.glb";
       descPath += "$name.json";
     }
   }
 
-  Future<void> _loadDescription() async {
-    try {
-      final String jsonString = await rootBundle.loadString(descPath);
-      
-      final Map<String, dynamic> description = jsonDecode(jsonString);
-
-      detail = Equipment.fromJson(description);
-
-      // name = description['name'];
-      // category = description['category'];
-      // function = description['function'];
-      // usage = description['usage'];
-      // specifications = description['specifications'];
-      // maintenance = description['maintenance'];
-      // warning = description['warning'];
-    } catch (e) {
-      print('Error loading description file $descPath: $e');
-      // Set properties to null to handle missing data gracefully
+  void _loadDescription() async {
+    if (detail != null) {
+      return;
     }
+    detail = EquipmentManager().getEquipmentByModel(modelName);
   }
 
   void _createARNode() {
