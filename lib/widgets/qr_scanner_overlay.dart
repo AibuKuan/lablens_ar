@@ -97,7 +97,7 @@ class _QRScannerOverlayState extends State<QRScannerOverlay> with SingleTickerPr
                       color: Colors.red,
                       boxShadow: [
                         BoxShadow(
-                          color: Colors.red.withOpacity(0.5),
+                          color: Colors.red.withValues(alpha: 0.5),
                           blurRadius: 4.0,
                           spreadRadius: 2.0,
                         ),

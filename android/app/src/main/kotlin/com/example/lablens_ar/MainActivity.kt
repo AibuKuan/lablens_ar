@@ -1,4 +1,4 @@
-package com.example.ar_app
+package com.example.lablens_ar
 
 import io.flutter.embedding.android.FlutterActivity
 

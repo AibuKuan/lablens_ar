@@ -1,4 +1,4 @@
-import 'package:ar_app/models/equipment.dart';
+import 'package:lablens_ar/models/equipment.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_3d_controller/flutter_3d_controller.dart';
 
@@ -157,7 +157,7 @@ class _ModelViewerScreenState extends State<ModelViewerScreen> {
                               ),
                             ),
                           );
-                        }).toList(),
+                        }),
                       ],
                     ),
                   ),

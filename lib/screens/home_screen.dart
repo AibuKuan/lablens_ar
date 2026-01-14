@@ -39,7 +39,7 @@ class HomeScreen extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Icon(Icons.check_circle_outline, size: 18, color: color.withOpacity(0.7)),
+          Icon(Icons.check_circle_outline, size: 18, color: color.withValues(alpha: 0.7)),
           const SizedBox(width: 8),
           Expanded(
             child: Text.rich(

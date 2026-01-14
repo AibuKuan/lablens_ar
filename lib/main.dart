@@ -1,6 +1,6 @@
-import 'package:ar_app/screens/home_screen.dart';
-import 'package:ar_app/screens/library_screen.dart';
-import 'package:ar_app/services/description.dart';
+import 'package:lablens_ar/screens/home_screen.dart';
+import 'package:lablens_ar/screens/library_screen.dart';
+import 'package:lablens_ar/services/description.dart';
 import 'package:flutter/material.dart';
 
 import 'screens/scanner_screen.dart';

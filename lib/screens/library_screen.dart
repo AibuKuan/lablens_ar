@@ -1,7 +1,7 @@
-import 'package:ar_app/models/equipment.dart';
-import 'package:ar_app/services/description.dart';
-import 'package:ar_app/widgets/equipment_row.dart';
-import 'package:ar_app/widgets/search_form.dart';
+import 'package:lablens_ar/models/equipment.dart';
+import 'package:lablens_ar/services/description.dart';
+import 'package:lablens_ar/widgets/equipment_row.dart';
+import 'package:lablens_ar/widgets/search_form.dart';
 import 'package:flutter/material.dart';
 
 class LibraryScreen extends StatefulWidget {

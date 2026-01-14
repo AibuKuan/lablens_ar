@@ -1,6 +1,6 @@
-import 'package:ar_app/models/equipment.dart';
-import 'package:ar_app/services/description.dart';
-import 'package:ar_app/utils/asset.dart';
+import 'package:lablens_ar/models/equipment.dart';
+import 'package:lablens_ar/services/description.dart';
+import 'package:lablens_ar/utils/asset.dart';
 import 'package:ar_flutter_plugin_2/datatypes/node_types.dart';
 import 'package:ar_flutter_plugin_2/managers/ar_object_manager.dart';
 import 'package:ar_flutter_plugin_2/models/ar_anchor.dart';

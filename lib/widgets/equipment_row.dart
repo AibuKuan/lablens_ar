@@ -1,9 +1,9 @@
-import 'package:ar_app/screens/model_viewer_screen.dart';
-import 'package:ar_app/services/model.dart';
-import 'package:ar_app/utils/ar.dart';
-import 'package:ar_app/utils/asset.dart';
+import 'package:lablens_ar/screens/model_viewer_screen.dart';
+import 'package:lablens_ar/services/model.dart';
+import 'package:lablens_ar/utils/ar.dart';
+import 'package:lablens_ar/utils/asset.dart';
 import 'package:flutter/material.dart';
-import 'package:ar_app/models/equipment.dart'; // Ensure correct path to your model
+import 'package:lablens_ar/models/equipment.dart'; // Ensure correct path to your model
 
 
 class EquipmentRow extends StatefulWidget {

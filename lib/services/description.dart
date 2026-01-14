@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/services.dart';
-import 'package:ar_app/models/equipment.dart';
+import 'package:lablens_ar/models/equipment.dart';
 
 class EquipmentManager {
   static final EquipmentManager _instance = EquipmentManager._internal();
@@ -39,7 +39,6 @@ class EquipmentManager {
     return null;
   }
 
-  
   void searchEquipments(String? query) {
     if (query == null || query.isEmpty) {
       equipmentsFiltered = equipments;
@@ -52,11 +51,12 @@ class EquipmentManager {
   }
 
   void getCategories() {
-    equipments.forEach((equipment) {
-      if (!categories.contains(equipment.category)) {
-        categories.add(equipment.category);
-      }
-    });
+    categories = equipments.map((equipment) => equipment.category).toSet().toList();
+    // equipments.forEach((equipment) {
+    //   if (!categories.contains(equipment.category)) {
+    //     categories.add(equipment.category);
+    //   }
+    // });
   }
 
   void searchCategories(Map? categories) {

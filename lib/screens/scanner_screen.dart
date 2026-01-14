@@ -1,7 +1,7 @@
-import 'package:ar_app/screens/model_viewer_screen.dart';
-import 'package:ar_app/services/model.dart';
-import 'package:ar_app/utils/ar.dart';
-import 'package:ar_app/widgets/qr_scanner_overlay.dart';
+import 'package:lablens_ar/screens/model_viewer_screen.dart';
+import 'package:lablens_ar/services/model.dart';
+import 'package:lablens_ar/utils/ar.dart';
+import 'package:lablens_ar/widgets/qr_scanner_overlay.dart';
 import 'package:flutter/material.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
 

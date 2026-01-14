@@ -1,5 +1,5 @@
-import 'package:ar_app/widgets/equipment_detail.dart';
-import 'package:ar_app/widgets/jumping_arrow_indicator.dart';
+import 'package:lablens_ar/widgets/equipment_detail.dart';
+import 'package:lablens_ar/widgets/jumping_arrow_indicator.dart';
 import 'package:ar_flutter_plugin_2/ar_flutter_plugin.dart';
 import 'package:ar_flutter_plugin_2/datatypes/config_planedetection.dart';
 import 'package:ar_flutter_plugin_2/datatypes/hittest_result_types.dart';

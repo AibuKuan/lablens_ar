@@ -1,5 +1,3 @@
-import 'package:ar_app/services/description.dart';
-import 'package:ar_app/widgets/filter_checkbox.dart';
 import 'package:flutter/material.dart';
 
 class SearchForm extends StatefulWidget {
@@ -28,7 +26,10 @@ class _SearchFormState extends State<SearchForm> {
   @override
   void initState() {
     super.initState();
-    categories = Map.fromIterable(widget.categories ?? [], key: (value) => value, value: (_) => true);
+    for (var category in widget.categories ?? []) {
+      categories[category] = true;
+    }
+    // categories = Map.fromIterable(widget.categories ?? [], key: (value) => value, value: (_) => true);
   }
 
   bool _isFilterOpen = false;
@@ -47,7 +48,7 @@ class _SearchFormState extends State<SearchForm> {
               borderRadius: BorderRadius.circular(30),
               boxShadow: [
                 BoxShadow(
-                  color: Colors.black.withOpacity(0.05),
+                  color: Colors.black.withValues(alpha: 0.05),
                   blurRadius: 10,
                   offset: const Offset(0, 4),
                 ),
@@ -101,7 +102,7 @@ class _SearchFormState extends State<SearchForm> {
                           _onSearchChange(query, categories);
                         });
                       },
-                      selectedColor: Colors.blueAccent.withOpacity(0.2),
+                      selectedColor: Colors.blueAccent.withValues(alpha: 0.2),
                       checkmarkColor: Colors.blueAccent,
                     ),
                 ],

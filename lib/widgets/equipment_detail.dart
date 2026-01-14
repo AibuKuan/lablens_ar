@@ -1,4 +1,4 @@
-import 'package:ar_app/models/equipment.dart';
+import 'package:lablens_ar/models/equipment.dart';
 import 'package:flutter/material.dart';
 
 class EquipmentDetail extends StatelessWidget {
@@ -46,7 +46,7 @@ class EquipmentDetail extends StatelessWidget {
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
           decoration: BoxDecoration(
-            color: Theme.of(context).colorScheme.primary.withOpacity(0.15),
+            color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.15),
             borderRadius: BorderRadius.circular(20),
             border: Border.all(color: Theme.of(context).colorScheme.primary),
           ),

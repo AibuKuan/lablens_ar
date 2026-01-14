@@ -45,51 +45,49 @@ class _ModelScalerState extends State<ModelScaler> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        mainAxisSize: MainAxisSize.min, 
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          IconButton(
-            icon: const Icon(Icons.add, size: 24),
-            onPressed: _increment,
-            color: Colors.white,
-            disabledColor: Colors.white30,
-            tooltip: 'Increase Scale',
-          ),
+    return Column(
+      mainAxisSize: MainAxisSize.min, 
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        IconButton(
+          icon: const Icon(Icons.add, size: 24),
+          onPressed: _increment,
+          color: Colors.white,
+          disabledColor: Colors.white30,
+          tooltip: 'Increase Scale',
+        ),
 
-          RotatedBox(
-            quarterTurns: -1,
-            child: SizedBox(
-              width: 300, 
-              height: 40, 
-              child: SliderTheme(
-                data: SliderTheme.of(context).copyWith(
-                  showValueIndicator: ShowValueIndicator.never,
-                  thumbShape: const RoundSliderThumbShape(enabledThumbRadius: 6.0),
-                ),
-                child: Slider(
-                  onChanged: _updateValue,
-                  onChangeEnd: _resizeModel,
-                  value: _currentValue,
-                  min: widget.min,
-                  max: widget.max,
-                  activeColor: Colors.white,
-                  inactiveColor: Colors.white30,
-                ),
+        RotatedBox(
+          quarterTurns: -1,
+          child: SizedBox(
+            width: 300, 
+            height: 40, 
+            child: SliderTheme(
+              data: SliderTheme.of(context).copyWith(
+                showValueIndicator: ShowValueIndicator.never,
+                thumbShape: const RoundSliderThumbShape(enabledThumbRadius: 6.0),
+              ),
+              child: Slider(
+                onChanged: _updateValue,
+                onChangeEnd: _resizeModel,
+                value: _currentValue,
+                min: widget.min,
+                max: widget.max,
+                activeColor: Colors.white,
+                inactiveColor: Colors.white30,
               ),
             ),
           ),
+        ),
 
-          IconButton(
-            icon: const Icon(Icons.remove, size: 24),
-            onPressed: _decrement,
-            color: Colors.white,
-            disabledColor: Colors.white30,
-            tooltip: 'Decrease Scale',
-          ),
-        ],
-      ),
+        IconButton(
+          icon: const Icon(Icons.remove, size: 24),
+          onPressed: _decrement,
+          color: Colors.white,
+          disabledColor: Colors.white30,
+          tooltip: 'Decrease Scale',
+        ),
+      ],
     );
   }
 
