@@ -52,12 +52,10 @@ class _ScannerScreenState extends State<ScannerScreen> with WidgetsBindingObserv
     _controller.start().whenComplete(() => _isStarting = false);
   }
 
-  // The return type is changed to Future<String?> to handle the possible outcomes
   Future<void> _showViewOptionsDialog(BuildContext context, Model model) async {
-    // We expect one of three results: 'ar', 'viewer', or null (if canceled/dismissed)
     final String? actionChoice = await showDialog<String>(
       context: context,
-      barrierDismissible: true, // Allow user to dismiss by tapping outside
+      barrierDismissible: true,
       builder: (BuildContext dialogContext) {
         return AlertDialog(
           title: const Text('View Model Options'),
@@ -78,7 +76,6 @@ class _ScannerScreenState extends State<ScannerScreen> with WidgetsBindingObserv
             ),
           ),
           actions: <Widget>[
-            // 1. CANCEL Button (Restarts scanner)
             TextButton(
               child: const Text('CANCEL'),
               onPressed: () {
@@ -86,7 +83,6 @@ class _ScannerScreenState extends State<ScannerScreen> with WidgetsBindingObserv
               },
             ),
             
-            // 2. MODEL VIEWER Button
             TextButton(
               child: const Text('3D VIEWER'),
               onPressed: () {
@@ -94,7 +90,6 @@ class _ScannerScreenState extends State<ScannerScreen> with WidgetsBindingObserv
               },
             ),
             
-            // 3. AR VIEW Button
             TextButton(
               child: const Text('AR VIEW'),
               onPressed: () {
@@ -106,45 +101,30 @@ class _ScannerScreenState extends State<ScannerScreen> with WidgetsBindingObserv
       },
     );
 
-    // --- ACT BASED ON THE DIALOG RESULT ---
     if (actionChoice == 'ar') {
-      // Open AR View
       showARView(context, model, _restartScanner);
     } else if (actionChoice == 'viewer') {
-      // Open 2D Model Viewer
-      // NOTE: I'm replacing widget.equipment with 'model' assuming that 'model' 
-      // contains the necessary data you pass to ModelViewerScreen.
       Navigator.push(
         context,
         MaterialPageRoute(
           builder: (context) => ModelViewerScreen(
-            // Pass the necessary data (e.g., the scanned model)
             equipment: model.detail!, 
           ),
         ),
-      ).then((_) => _restartScanner()); // Restart scanner when viewer is closed
+      ).then((_) => _restartScanner());
     } else {
-      // If canceled or dismissed, restart the scanner
       _restartScanner();
     }
   }
 
   @override
   Widget build(BuildContext context) {
-    // Get the total height of the widget (usually the screen height)
     final double screenHeight = MediaQuery.sizeOf(context).height;
+    const double verticalShiftRatio = -0.10;
     
-    // Define the desired vertical shift as a fraction of the screen height.
-    // Example: Shift up by 10% of the screen height.
-    // 0.10 means 10% of the screen height. Use negative to shift up.
-    const double verticalShiftRatio = -0.10; // Change this value (e.g., -0.05 for a smaller shift)
-    
-    // Calculate the fixed pixel offset based on the ratio
     final double verticalOffset = screenHeight * verticalShiftRatio;
 
     final Rect scanArea = Rect.fromCenter(
-      // The center() method calculates the center of the screen size.
-      // We then apply our calculated proportional vertical offset.
       center: MediaQuery.sizeOf(context).center(Offset(0, verticalOffset)),
       width: 300,
       height: 300,
@@ -154,8 +134,6 @@ class _ScannerScreenState extends State<ScannerScreen> with WidgetsBindingObserv
       controller: _controller,
       scanWindow: scanArea,
       overlayBuilder: (context, constraints) {
-        // The constraints argument provides the size of the MobileScanner widget.
-        // This is passed directly into the QrScannerOverlay.
         return QRScannerOverlay(
           scanWindow: scanArea,
         );

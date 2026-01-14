@@ -58,7 +58,7 @@ class _ModelViewerScreenState extends State<ModelViewerScreen> {
                 padding: const EdgeInsets.all(20.0),
                 // Use a dark, semi-transparent background
                 decoration: BoxDecoration(
-                  color: Colors.black.withOpacity(0.7), 
+                  color: Colors.blueAccent.withAlpha(700), 
                   borderRadius: BorderRadius.circular(15.0),
                 ),
                 child: Text(
@@ -98,12 +98,12 @@ class _ModelViewerScreenState extends State<ModelViewerScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text('${widget.equipment.name} 3D View'),
-        backgroundColor: Colors.blueGrey,
+        backgroundColor: Colors.blueAccent.withAlpha(200),
       ),
       body: Stack(
         children: <Widget>[
           Container(
-            color: Colors.grey[200],
+            color: Colors.grey[100],
             child: Flutter3DViewer(
               controller: _controller,
               src: widget.equipment.modelPath,
@@ -122,7 +122,7 @@ class _ModelViewerScreenState extends State<ModelViewerScreen> {
                 child: Container(
                   padding: const EdgeInsets.all(8.0),
                   decoration: BoxDecoration(
-                    color: Colors.black54,
+                    color: Colors.blueAccent.withAlpha(50),
                     borderRadius: BorderRadius.circular(20.0),
                   ),
                   child: SingleChildScrollView(
@@ -181,7 +181,7 @@ class _ModelViewerScreenState extends State<ModelViewerScreen> {
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
         foregroundColor: Colors.white,
-        backgroundColor: Colors.blueGrey,
+        backgroundColor: Colors.blueAccent,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(15.0),
         ),

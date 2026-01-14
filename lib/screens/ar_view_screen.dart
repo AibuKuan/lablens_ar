@@ -131,29 +131,14 @@ class _ARViewScreenState extends State<ARViewScreen> {
             Positioned(
               left: 0,
               right: 0,
-              bottom: 0, // Pin the indicator to the very bottom
+              bottom: 0,
               child: Center(
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    // Option A: The classic arrow indicator
                     const JumpingArrowIndicator(),
-            
                     const SizedBox(height: 10),
-                    
-                    // Option B: The modern "Grabber" bar (less height, common in mobile drawers)
-                    /*
-                    Container(
-                      width: 40,
-                      height: 4,
-                      decoration: BoxDecoration(
-                        color: Colors.white70,
-                        borderRadius: BorderRadius.circular(2),
-                      ),
-                    ),
-                    */
-
-                    const SizedBox(height: 10), // Optional: Padding above the actual screen edge
+                    const SizedBox(height: 10), 
                   ],
                 ),
               ),
@@ -177,7 +162,6 @@ class _ARViewScreenState extends State<ARViewScreen> {
 
     widget.model.addObjectManager(arObjectManager);
 
-    // 1. Session Initialization
     arSessionManager.onInitialize(
       showFeaturePoints: false,
       showPlanes: true, // Show planes to guide user taps
@@ -185,61 +169,36 @@ class _ARViewScreenState extends State<ARViewScreen> {
       handleTaps: true, // Enable tap handling for placement
     );
     
-    // 2. Set Callbacks
     arSessionManager.onPlaneOrPointTap = _onPlaneOrPointTapped;
     
-    // 3. Object Manager Initialization & Gestures
     arObjectManager.onInitialize();
     
-    // Handlers only take the nodeName as argument
     arObjectManager.onPanChange = _onPanChange;
     arObjectManager.onRotationChange = _onRotationChange;
-    
-    // Note: The onNodeScale handler is not explicitly available.
   }
 
-  // --- Gesture Handlers (for fine-tuning movement, rotation) ---
-  // Signature now only accepts String nodeName
   void _onPanChange(String nodeName) {
-    // This function is triggered when the user drags the model (Pan gesture).
     debugPrint('Node $nodeName panned.');
-    // The plugin handles the underlying anchor movement automatically.
   }
 
-  // Signature now only accepts String nodeName
   void _onRotationChange(String nodeName) {
-    // This function is triggered when the user rotates the model (Rotation gesture).
     debugPrint('Node $nodeName rotated.');
   }
 
-  // --- Core Re-Anchoring Logic (for moving the model to a new tap location) ---
   Future<void> _onPlaneOrPointTapped(List<ARHitTestResult> hitTestResults) async {
     ARHitTestResult? hit;
 
-    // 1. Find a valid hit result (plane is preferred for stability)
     for (var r in hitTestResults) {
-      if (r.type == ARHitTestResultType.plane) {
+      if (r.type == ARHitTestResultType.plane || r.type == ARHitTestResultType.point) {
         hit = r;
         break;
       }
     }
-    // Fallback to point if no plane was hit
-    if (hit == null) {
-        for (var r in hitTestResults) {
-            // ARHitTestResultType is 'point'
-            if (r.type == ARHitTestResultType.point) {
-                hit = r;
-                break;
-            }
-        }
-    }
 
     if (hit == null) {
-      // No suitable surface was hit
       return;
     }
 
-    // 2. Remove the previous anchor and node if they exist (to simulate a move)
     if (currentAnchor != null) {
       await arAnchorManager.removeAnchor(currentAnchor!);
       currentAnchor = null;
@@ -249,8 +208,6 @@ class _ARViewScreenState extends State<ARViewScreen> {
       placedNode = null;
     }
     
-    // 3. Create and add a new anchor at the hit location
-    // The constructor requires 'type' and 'transformation'.
     final newAnchor = ARPlaneAnchor(
       transformation: hit.worldTransform
     );
@@ -260,15 +217,11 @@ class _ARViewScreenState extends State<ARViewScreen> {
       currentAnchor = newAnchor;
       widget.model.currentAnchor = currentAnchor;
 
-      // 4. Create the node and attach it to the new anchor
       placedNode = widget.model.arNode;
 
       await arObjectManager.addNode(placedNode!, planeAnchor: currentAnchor);
       
-      // Update UI state to show the model is placed
-      setState(() {
-        // Triggers a rebuild to update the AppBar text
-      });
+      setState(() {});
     }
   }
 }

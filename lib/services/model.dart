@@ -9,45 +9,38 @@ import 'package:vector_math/vector_math_64.dart' as vector;
 
 
 class Model {
-  late String modelName;
-  String modelPath = "assets/models/";
-  String descPath = "assets/descriptions/";
-
   final double initialScale = 0.2;
+  String modelPath = "assets/models/";
 
+  late String modelName;
   ARNode? arNode;
   ARObjectManager? objectManager;
   ARPlaneAnchor? currentAnchor;
-
   Equipment? detail;
 
   static Future<Model> create({String? name, Equipment? detail}) async {
     if (name == null && detail == null) {
       throw ArgumentError('Either "name" (for asset lookup) or "detail" (for direct URL/path) must be provided.');
     }
-    if (name != null && detail != null) {
-      throw ArgumentError('Only one of "name" or "detail" should be provided.');
-    }
 
-    final model = Model._internal(name ?? "model", detail);
+    final model = Model._internal(name, detail);
     if (detail == null) {
       model._loadDescription();
     } else {
-      detail = detail;
+      model.detail = detail;
     }
     model._createARNode();
     return model;
   }
   
-  Model._internal(String name, Equipment? detail) {
+  Model._internal(String? name, Equipment? detail) {
     if (detail != null) {
       modelName = detail.modelName;
       modelPath = detail.modelPath;
       this.detail = detail;
-    } else {
+    } else if (name != null) {
       modelName = name;
       modelPath += "$name.glb";
-      descPath += "$name.json";
     }
   }
 

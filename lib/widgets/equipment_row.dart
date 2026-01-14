@@ -22,6 +22,7 @@ class _EquipmentRowState extends State<EquipmentRow> {
   void initState() {
     super.initState();
     getFileSize(widget.equipment.modelPath).then((value) {
+      if (!mounted) return;
       setState(() {
         fileSize = value;
       });
@@ -88,7 +89,7 @@ class _EquipmentRowState extends State<EquipmentRow> {
                         Container(
                           padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
                           decoration: BoxDecoration(
-                            color: Theme.of(context).colorScheme.primary.withAlpha((0.15 * 255).toInt()),
+                            color: Colors.blueAccent.withAlpha((0.15 * 255).toInt()),
                             borderRadius: BorderRadius.circular(4),
                           ),
                           child: Text(
@@ -96,7 +97,7 @@ class _EquipmentRowState extends State<EquipmentRow> {
                             style: TextStyle(
                               fontSize: 13,
                               fontWeight: FontWeight.w600,
-                              color: Theme.of(context).primaryColor,
+                              color: Colors.blueAccent,
                             ),
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
@@ -172,7 +173,7 @@ class _EquipmentRowState extends State<EquipmentRow> {
                         icon: Icon(
                           Icons.videocam,
                           size: 30,
-                          color: Theme.of(context).primaryColor,
+                          color: Colors.blueAccent,
                         )
                       ),
 
@@ -190,7 +191,7 @@ class _EquipmentRowState extends State<EquipmentRow> {
                         icon: Icon(
                           Icons.view_in_ar,
                           size: 30,
-                          color: Theme.of(context).primaryColor,
+                          color: Colors.blueAccent,
                         )
                       )
                     ]

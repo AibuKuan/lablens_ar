@@ -3,13 +3,10 @@ import 'package:flutter/services.dart';
 import 'package:ar_app/models/equipment.dart';
 
 class EquipmentManager {
-  // Static instance for the singleton
   static final EquipmentManager _instance = EquipmentManager._internal();
 
-  // Factory constructor returns the same instance
   factory EquipmentManager() => _instance;
 
-  // Private constructor
   EquipmentManager._internal();
 
   List<Equipment> equipments = [];
@@ -18,7 +15,7 @@ class EquipmentManager {
   bool isLoaded = false;
 
   Future<void> loadEquipments() async {
-    if (isLoaded) return; // Prevent reloading if already done
+    if (isLoaded) return;
 
     final String response = await rootBundle.loadString('assets/descriptions/descriptions.json');
     final Map<String, dynamic> data = jsonDecode(response);

@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 
 import 'screens/scanner_screen.dart';
 
-// void main() => runApp(const MyApp());
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await EquipmentManager().loadEquipments();

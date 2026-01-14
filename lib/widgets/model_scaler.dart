@@ -45,17 +45,11 @@ class _ModelScalerState extends State<ModelScaler> {
 
   @override
   Widget build(BuildContext context) {
-    // 1. We use a Column to stack the controls vertically (Top to Bottom).
     return Container(
-      // color: Colors.black12,
-      // padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
-      
       child: Column(
-        // mainAxisSize: MainAxisSize.min is crucial for the Column to shrink-wrap its content
         mainAxisSize: MainAxisSize.min, 
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          // 1. PLUS Button (+) - Stays at the Top
           IconButton(
             icon: const Icon(Icons.add, size: 24),
             onPressed: _increment,
@@ -64,17 +58,10 @@ class _ModelScalerState extends State<ModelScaler> {
             tooltip: 'Increase Scale',
           ),
 
-          // Add some space between the button and the slider track
-          // const SizedBox(height: 16), 
-
-          // 2. The Slider (Rotated 90 degrees)
-          // Note: The RotatedBox is now INSIDE the Column.
           RotatedBox(
-            quarterTurns: -1, // Rotates the Slider 90 degrees counter-clockwise
+            quarterTurns: -1,
             child: SizedBox(
-              // The original width of the slider (the track length)
               width: 300, 
-              // The original height (thickness) should be small
               height: 40, 
               child: SliderTheme(
                 data: SliderTheme.of(context).copyWith(
@@ -94,10 +81,6 @@ class _ModelScalerState extends State<ModelScaler> {
             ),
           ),
 
-          // Add some space between the slider track and the button
-          // const SizedBox(height: 16), 
-
-          // 3. MINUS Button (-) - Stays at the Bottom
           IconButton(
             icon: const Icon(Icons.remove, size: 24),
             onPressed: _decrement,
