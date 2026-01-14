@@ -1,9 +1,0 @@
-{
-    "name":  "Ambu Bag (Bag-Valve-Mask Resuscitator)",
-    "modelPath":  "assets/models/ambu-bag.glb",
-    "category":  "Respiratory Care Equipment",
-    "specifications":  "Manual resuscitator made of medical-grade silicone or PVC, includes a self-inflating bag, one-way valve, oxygen reservoir, and mask; adult and pediatric sizes available. Function: Used to provide positive pressure ventilation to patients who are not breathing or not breathing adequately.",
-    "usage":  "Wear gloves; ensure proper assembly of bag, valve, and mask; position mask securely over patient’s nose and mouth; squeeze bag steadily while observing chest rise. Safety and Maintenance Notes: Use with proper PPE (gloves, mask, eye protection); sterilize reusable components after use and follow manufacturer cleaning protocol; inspect for leaks or damage before each use.",
-    "maintenance":  "Use with proper PPE (gloves, mask, eye protection); sterilize reusable components after use and follow manufacturer cleaning protocol; inspect for leaks or damage before each use.",
-    "warning":  "Inadequate mask seal, over-ventilation causing gastric inflation, or improper cleaning leading to infection risk."
-}

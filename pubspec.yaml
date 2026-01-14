@@ -76,7 +76,6 @@ flutter:
 
   assets:
     - assets/
-    - assets/model_viewer.html
     - assets/descriptions/
     - assets/models/
 

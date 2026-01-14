@@ -1,4 +1,4 @@
-# ar_app
+# LabLens AR
 
 A new Flutter project.
 
